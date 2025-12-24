@@ -25,3 +25,33 @@ function rollYear() {
 }
 
 rollYear();
+
+// IMPACT SECTION - CHILDREN COUNT ANIMATION
+let childrenElem = document.getElementById('children-count');
+let childrenCount = 500; // final count
+let currentCount = 0;
+let increment = Math.ceil(childrenCount / 100); // smooth increments
+
+function countChildren() {
+    if(currentCount < childrenCount) {
+        currentCount += increment;
+        if(currentCount > childrenCount) currentCount = childrenCount;
+        childrenElem.textContent = currentCount;
+        setTimeout(countChildren, 30); // adjust speed here
+    }
+}
+
+countChildren();
+let heroText = document.querySelector('.hero-text');
+
+function showNextSlide() {
+    slides[currentSlide].classList.remove('active');
+    heroText.style.opacity = 0; // fade out text
+
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+
+    setTimeout(() => {
+        heroText.style.opacity = 1; // fade in text
+    }, 500); // matches half the slide fade
+}
