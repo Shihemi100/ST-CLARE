@@ -162,3 +162,125 @@ a {
 .hero-text {
     transition: opacity 0.5s ease-in-out;
 }
+/* ABOUT PAGE */
+
+/* HERO */
+.about-hero {
+  height: 70vh;
+  background: url("../images/about-hero.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-quote {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* STORY SECTION */
+.about-story {
+  background-color: #fff6cc; /* pale yellow */
+  padding: 60px 8%;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  color: maroon;
+  font-weight: bold;
+  border-bottom: 2px solid maroon;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+/* Content layout */
+.story-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.story-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.story-slideshow {
+  flex: 1;
+  max-width: 350px;
+}
+
+.story-slideshow img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* MISSION & VISION */
+.mission-vision {
+  background-color: #fff6cc;
+  padding: 60px 8%;
+  display: flex;
+  gap: 30px;
+}
+
+.mv-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+/* IDENTITY */
+.identity {
+  background-color: #fff6cc;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.identity h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* CTA */
+.about-cta {
+  background-color: #f1e3a4;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.donate-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: maroon;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+  background: #5a0000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
