@@ -56,11 +56,10 @@ function showNextSlide() {
         heroText.style.opacity = 1; // fade in text
     }, 500); // matches half the slide fade
 }
-// Make the mini navbar clickable
+// Make mini navbar items clickable
 document.querySelectorAll('.amenity-item').forEach(item => {
   item.addEventListener('click', () => {
     const section = item.dataset.section;
-    alert(`You clicked on ${section}! Link to a page or scroll to section.`);
-    // Example: window.location.href = section + ".html";
+    alert(`You clicked on ${section}! Replace alert with real navigation.`);
   });
 });
