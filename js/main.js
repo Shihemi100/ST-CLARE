@@ -63,3 +63,5 @@ document.querySelectorAll('.amenity-item').forEach(item => {
     alert(`You clicked on ${section}! Replace alert with real navigation.`);
   });
 });
+// Mini navbar / dropdown not needed here but can animate donation icons
+// Floating donation emojis already animated via CSS

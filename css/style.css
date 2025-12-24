@@ -580,3 +580,132 @@ a {
     gap: 15px;
   }
 }
+/* DONORS & PARTNERS PAGE */
+
+/* HERO */
+.donors-hero {
+  height: 70vh;
+  background-color: #add8e6; /* temporary placeholder */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.donors-hero .hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #004080;
+}
+
+.donors-hero .hero-quote {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 600px;
+  color: #004080;
+}
+
+.slideshow-placeholder {
+  width: 80%;
+  height: 250px;
+  margin-top: 20px;
+  background-color: #87cefa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* DONATION ANIMATIONS */
+.donation-animations {
+  position: relative;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.donation-animations .money,
+.donation-animations .coin,
+.donation-animations .heart {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 4s infinite ease-in-out;
+}
+
+.donation-animations .money { left: 10%; animation-delay: 0s; }
+.donation-animations .coin { left: 40%; animation-delay: 1s; }
+.donation-animations .heart { left: 70%; animation-delay: 2s; }
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-30px); opacity: 0.7; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* CONTENT SECTION */
+.donors-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 60px 8%;
+  background-color: #d6edff;
+  align-items: flex-start;
+}
+
+.donors-paragraph {
+  flex: 2;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.donors-paragraph .donate-btn {
+  margin-top: 20px;
+  background: #004080;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.donors-table {
+  flex: 1;
+}
+
+.donors-table select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid red;
+  font-weight: bold;
+  background-color: white;
+  color: #004080;
+}
+
+/* DONOR SHOWCASE */
+.donor-showcase {
+  background-color: #bce0ff;
+  padding: 50px 8%;
+  text-align: center;
+}
+
+.donor-showcase h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* DONATE, IDENTITY, FOOTER reuse previous classes */
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .donors-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .donors-table {
+    margin-top: 20px;
+  }
+}
