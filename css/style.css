@@ -284,3 +284,58 @@ a {
   text-align: center;
   padding: 20px;
 }
+/* DONATE SECTION */
+.page-donate {
+  background: url("../images/donate-edu.jpg") center/cover no-repeat;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-donate .donate-overlay {
+  background: rgba(0,0,0,0.45);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.page-donate .donate-overlay h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.page-donate .donate-btn {
+  background: #004080;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* IDENTITY SECTION */
+.identity {
+  background-color: #d6edff; /* same baby blue as content */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.identity h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004080;
+}
+
+/* FOOTER */
+.footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
