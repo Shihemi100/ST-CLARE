@@ -284,6 +284,80 @@ a {
   text-align: center;
   padding: 20px;
 }
+/* EDUCATION PAGE */
+
+/* HERO */
+.edu-hero {
+  height: 70vh;
+  background: url("../images/edu-hero.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.edu-hero .hero-overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 123, 255, 0.2); /* lighter overlay for visibility */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.edu-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.edu-hero .hero-quote {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 600px;
+}
+
+/* EDUCATION CONTENT */
+.edu-content {
+  padding: 60px 8%;
+  background-color: #d6edff; /* baby blue */
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.edu-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.edu-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.edu-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.edu-text h2 {
+  font-size: 1.8rem;
+  color: #004080; /* darker blue */
+  margin-bottom: 15px;
+}
+
+.edu-img {
+  flex: 1;
+  max-width: 400px;
+}
+
+.edu-img img {
+  width: 100%;
+  border-radius: 8px;
+}
+
 /* DONATE SECTION */
 .page-donate {
   background: url("../images/donate-edu.jpg") center/cover no-repeat;
@@ -295,7 +369,171 @@ a {
 }
 
 .page-donate .donate-overlay {
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.25); /* slight dark overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.page-donate .donate-overlay h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.page-donate .donate-btn {
+  background: #004080;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* IDENTITY SECTION */
+.identity {
+  background-color: #d6edff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.identity h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004080;
+}
+
+/* FOOTER */
+.footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .edu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .edu-item.reverse {
+    flex-direction: column;
+  }
+
+  .edu-img {
+    max-width: 100%;
+  }
+}
+/* BASIC AMENITIES PAGE */
+
+/* HERO */
+.amenities-hero {
+  height: 70vh;
+  background: url("../images/amenities-hero.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.amenities-hero .hero-overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 123, 255, 0.2); /* light baby blue overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.amenities-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.amenities-hero .hero-quote {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 600px;
+}
+
+/* INTRO SECTION */
+.amenities-intro {
+  display: flex;
+  gap: 40px;
+  padding: 60px 8%;
+  background-color: #d6edff;
+  align-items: center;
+}
+
+.intro-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.intro-img {
+  flex: 1;
+  max-width: 400px;
+}
+
+.intro-img img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* AMENITIES NAV */
+.amenities-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #bce0ff; /* slightly different baby blue */
+  padding: 30px 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.amenity-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.amenity-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.amenity-item p {
+  margin: 0;
+  font-weight: bold;
+  color: #004080;
+}
+
+.amenity-item:hover {
+  transform: translateY(-5px);
+}
+
+/* DONATE SECTION */
+.page-donate {
+  background: url("../images/donate-amenities.jpg") center/cover no-repeat;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-donate .donate-overlay {
+  background: rgba(0,0,0,0.25);
   width: 100%;
   height: 100%;
   display: flex;
@@ -319,23 +557,20 @@ a {
   border-radius: 5px;
 }
 
-/* IDENTITY SECTION */
-.identity {
-  background-color: #d6edff; /* same baby blue as content */
-  padding: 40px 0;
-  text-align: center;
+/* IDENTITY & FOOTER reuse existing classes */
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .amenities-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-img {
+    max-width: 100%;
+  }
+  .amenities-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
-.identity h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #004080;
-}
-
-/* FOOTER */
-.footer {
-  background: #004080;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
