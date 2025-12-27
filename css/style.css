@@ -739,3 +739,81 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+/* PROJECTS PAGE */
+
+/* HERO */
+.projects-hero {
+  height: 70vh;
+  background-color: #ffd6df; /* placeholder for big image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #800020;
+}
+
+/* PROJECTS SECTION */
+.projects-section {
+  background-color: #ffeef3;
+  padding: 60px 8%;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CARD */
+.project-card {
+  width: 280px;
+  height: 360px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #fffafc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.card-front h3,
+.card-back h3 {
+  color: #800020;
+}
+
+.project-img {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+/* BACK */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back p {
+  margin: 15px 0;
+}
