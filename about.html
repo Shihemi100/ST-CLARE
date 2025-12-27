@@ -100,3 +100,426 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Donate & Volunteer | Juba Rescue Centre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fde6ef;
+      color: #333;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+                  url("hero-placeholder.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+    }
+
+    /* STATS */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      background: #fff;
+      padding: 40px 20px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat h2 {
+      font-size: 2.5rem;
+      color: #e85a8c;
+    }
+
+    /* TEXT SECTION */
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .btns {
+      margin-top: 30px;
+    }
+
+    .btn {
+      background: #e85a8c;
+      color: white;
+      border: none;
+      padding: 14px 25px;
+      margin: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 30px;
+    }
+
+    .btn.secondary {
+      background: #f9b4cc;
+      color: #333;
+    }
+
+    /* DONATE FORM */
+    .donate-form {
+      display: none;
+      background: #fff;
+      padding: 40px;
+      max-width: 600px;
+      margin: 40px auto;
+      border-radius: 12px;
+    }
+
+    .donate-form input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .bank {
+      background: #fde6ef;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #f9b4cc;
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Donate & Volunteer Now</h1>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat">
+      <h2 id="year">0</h2>
+      <p>Year Started</p>
+    </div>
+    <div class="stat">
+      <h2 id="children">0</h2>
+      <p>Children Rescued</p>
+    </div>
+    <div class="stat">
+      <h2 id="ages">0</h2>
+      <p>Ages Supported</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content">
+    <p>
+      Your generosity gives children safety, education, food and hope.
+      Every donation creates a real, visible impact in a child’s life.
+    </p>
+
+    <p>
+      If you can’t donate financially, volunteering your time, skills,
+      or resources helps us build a stronger and safer future.
+    </p>
+
+    <div class="btns">
+      <button class="btn" onclick="toggleDonate()">Donate Now</button>
+      <button class="btn secondary" onclick="window.location.href='donation-pocket.html'">
+        Donation Pocket 🎁
+      </button>
+    </div>
+  </section>
+
+  <!-- DONATE FORM -->
+  <div class="donate-form" id="donateForm">
+    <h2>Make a Donation 💖</h2>
+
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email Address">
+    <input type="number" placeholder="Amount (KES)">
+
+    <div class="bank">
+      <strong>Bank Details</strong><br>
+      Bank: ABC Bank<br>
+      Account Name: Juba Rescue Centre<br>
+      Account No: 123456789
+    </div>
+
+    <button class="btn" style="margin-top:20px;">Submit Donation 💌</button>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta">
+    JUBA RESCUE CENTRE
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Juba Rescue Centre | All Rights Reserved
+  </footer>
+
+  <script>
+    // Counter animation
+    function animate(id, target) {
+      let count = 0;
+      const el = document.getElementById(id);
+      const interval = setInterval(() => {
+        count++;
+        el.innerText = count;
+        if (count === target) clearInterval(interval);
+      }, 20);
+    }
+
+    animate("year", 2012);
+    animate("children", 500);
+    animate("ages", 20);
+
+    function toggleDonate() {
+      const form = document.getElementById("donateForm");
+      form.style.display = form.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donation Pocket | Juba Rescue Centre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fde6ef;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 50px 20px 10px;
+      font-size: 3rem;
+      color: #e85a8c;
+    }
+
+    p.subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    /* CARD GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 40px 60px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .img-placeholder {
+      height: 160px;
+      background: #f9b4cc;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .price {
+      position: absolute;
+      inset: 0;
+      background: rgba(232,90,140,0.9);
+      color: white;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .price {
+      opacity: 1;
+    }
+
+    .card p {
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    /* FORM */
+    .form-box {
+      display: none;
+      background: #fff;
+      max-width: 500px;
+      margin: 0 auto 60px;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      background: #e85a8c;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 50px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Donation Pocket 🎁</h1>
+  <p class="subtitle">Choose an item to donate directly to the children 💕</p>
+
+  <!-- CARDS -->
+  <section class="grid">
+    <div class="card" onclick="openForm('Baby Formula')">
+      <div class="img-placeholder">🍼</div>
+      <div class="price">KES 2,500</div>
+      <p>Donate a bottle of baby formula</p>
+    </div>
+
+    <div class="card" onclick="openForm('Tissues')">
+      <div class="img-placeholder">🧻</div>
+      <div class="price">KES 500</div>
+      <p>Donate a pack of tissues</p>
+    </div>
+
+    <div class="card" onclick="openForm('Clothes')">
+      <div class="img-placeholder">👕</div>
+      <div class="price">KES 3,000</div>
+      <p>Donate clothes & essentials</p>
+    </div>
+
+    <div class="card" onclick="openForm('Food Supplies')">
+      <div class="img-placeholder">🍚</div>
+      <div class="price">KES 4,000</div>
+      <p>Donate food supplies</p>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <div class="form-box" id="formBox">
+    <h2 id="itemTitle">Donate Item</h2>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+
+    <button class="btn" onclick="submitDonation()">Submit Donation 📩</button>
+  </div>
+
+  <!-- SUCCESS -->
+  <div class="success" id="successMsg">
+    🎉 Thank you for your kindness!  
+    <br> Your donation request has been received 💖
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Juba Rescue Centre | Donation Pocket
+  </footer>
+
+  <script>
+    function openForm(item) {
+      document.getElementById("formBox").style.display = "block";
+      document.getElementById("itemTitle").innerText =
+        "Donate: " + item;
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+
+    function submitDonation() {
+      document.getElementById("formBox").style.display = "none";
+      document.getElementById("successMsg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

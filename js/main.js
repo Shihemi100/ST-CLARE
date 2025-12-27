@@ -105,3 +105,32 @@ document.addEventListener("DOMContentLoaded", () => {
 function flipCard(card) {
   card.classList.toggle("flipped");
 }
+const params = new URLSearchParams(window.location.search);
+const project = params.get("project");
+
+const title = document.getElementById("donate-title");
+const desc = document.getElementById("donate-description");
+const pocketBtn = document.getElementById("donation-pocket-btn");
+
+if (project) {
+  if (project === "house") {
+    title.textContent = "Support Housing Projects 🏠";
+    desc.textContent =
+      "Help us provide safe accommodation and shelter for children in need.";
+    pocketBtn.href = "donation-pocket.html?item=house";
+  }
+
+  if (project === "school") {
+    title.textContent = "Support Education Projects 📚";
+    desc.textContent =
+      "Your donation supports school fees, books, and learning materials.";
+    pocketBtn.href = "donation-pocket.html?item=school";
+  }
+
+  if (project === "food") {
+    title.textContent = "Support Food Programs 🍚";
+    desc.textContent =
+      "Help us provide daily nutritious meals to the children.";
+    pocketBtn.href = "donation-pocket.html?item=food";
+  }
+}
