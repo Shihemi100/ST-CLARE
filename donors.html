@@ -10,14 +10,40 @@
 
   <!-- HERO SLIDESHOW SECTION -->
   <section class="donors-hero">
-    <div class="hero-overlay">
-      <h1>DONORS & PARTNERS</h1>
-      <p class="hero-quote">
-        Supporting our mission, one generous act at a time.
-      </p>
+    <div class="slideshow-container">
+
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <div class="slide-img" style="background-color:#87cefa;"></div>
+        <div class="slide-text">
+          <h2>Local Community Support</h2>
+          <p>Our neighbors have helped provide school supplies and food for the children.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="slide-img" style="background-color:#add8e6;"></div>
+        <div class="slide-text">
+          <h2>International Donations</h2>
+          <p>Organizations from around the world have contributed to our education programs.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="slide-img" style="background-color:#b0e0e6;"></div>
+        <div class="slide-text">
+          <h2>Volunteer Contributions</h2>
+          <p>Volunteers donate time, care, and resources to make a real difference.</p>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
     </div>
-    <!-- Placeholder for slideshow -->
-    <div class="slideshow-placeholder">Slideshow Images Here</div>
   </section>
 
   <!-- DONATION ANIMATIONS -->
@@ -34,4 +60,39 @@
         Over the years, Juba Rescue Centre has received support from generous individuals,
         local businesses, and international organizations. Their contributions have been
         crucial in providing care, education, and hope to hundreds of children.
-      </
+      </p>
+      <a href="donate.html" class="donate-btn">Donate Now</a>
+    </div>
+
+    <div class="donors-table">
+      <select>
+        <option value="" disabled selected>Children Rescued Stats</option>
+        <option>Children Rescued: 500</option>
+        <option>Years Active: 2012-2025</option>
+        <option>Ages: 2-20</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- DONATE CTA SECTION -->
+  <section class="page-donate">
+    <div class="donate-overlay">
+      <h3>Support Our Mission to Help Every Child</h3>
+      <a href="donate.html" class="donate-btn">Donate Now</a>
+    </div>
+  </section>
+
+  <!-- IDENTITY SECTION -->
+  <section class="identity">
+    <h2>Juba Rescue Centre</h2>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Juba Rescue Centre. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

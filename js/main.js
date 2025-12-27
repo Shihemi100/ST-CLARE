@@ -63,5 +63,30 @@ document.querySelectorAll('.amenity-item').forEach(item => {
     alert(`You clicked on ${section}! Replace alert with real navigation.`);
   });
 });
-// Mini navbar / dropdown not needed here but can animate donation icons
-// Floating donation emojis already animated via CSS
+document.addEventListener("DOMContentLoaded", () => {
+  // Slideshow functionality
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) slide.classList.add("active");
+    });
+  }
+
+  function changeSlide(n) {
+    slideIndex += n;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+    showSlide(slideIndex);
+  }
+
+  // Auto-advance every 5 seconds
+  setInterval(() => {
+    changeSlide(1);
+  }, 5000);
+
+  // Initialize first slide
+  showSlide(slideIndex);
+});
