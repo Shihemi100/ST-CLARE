@@ -659,3 +659,83 @@ a {
 }
 
 /* Donation animations, content, CTA, identity, footer reuse previous CSS */
+/* FAQ PAGE */
+
+/* HERO */
+.faq-hero {
+  background-color: #ffe6ec;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.faq-hero h1 {
+  font-size: 3rem;
+  color: #800020;
+}
+
+.faq-hero p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* FAQ SECTION */
+.faq-section {
+  background-color: #fffafc;
+  padding: 60px 8%;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #f4b6c2;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #ffd6df;
+  border: none;
+  padding: 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* FORM */
+.faq-form-section {
+  background-color: #ffeef3;
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.faq-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-form input,
+.faq-form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #f4b6c2;
+}
+
+.faq-form button {
+  background-color: #800020;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
