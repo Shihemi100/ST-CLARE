@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donation Pocket | Juba Rescue Centre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fde6ef;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 50px 20px 10px;
+      font-size: 3rem;
+      color: #e85a8c;
+    }
+
+    p.subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    /* CARD GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 40px 60px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .img-placeholder {
+      height: 160px;
+      background: #f9b4cc;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .price {
+      position: absolute;
+      inset: 0;
+      background: rgba(232,90,140,0.9);
+      color: white;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .price {
+      opacity: 1;
+    }
+
+    .card p {
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    /* FORM */
+    .form-box {
+      display: none;
+      background: #fff;
+      max-width: 500px;
+      margin: 0 auto 60px;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      background: #e85a8c;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 50px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Donation Pocket 🎁</h1>
+  <p class="subtitle">Choose an item to donate directly to the children 💕</p>
+
+  <!-- CARDS -->
+  <section class="grid">
+    <div class="card" onclick="openForm('Baby Formula')">
+      <div class="img-placeholder">🍼</div>
+      <div class="price">KES 2,500</div>
+      <p>Donate a bottle of baby formula</p>
+    </div>
+
+    <div class="card" onclick="openForm('Tissues')">
+      <div class="img-placeholder">🧻</div>
+      <div class="price">KES 500</div>
+      <p>Donate a pack of tissues</p>
+    </div>
+
+    <div class="card" onclick="openForm('Clothes')">
+      <div class="img-placeholder">👕</div>
+      <div class="price">KES 3,000</div>
+      <p>Donate clothes & essentials</p>
+    </div>
+
+    <div class="card" onclick="openForm('Food Supplies')">
+      <di
