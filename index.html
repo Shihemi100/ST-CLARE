@@ -1,77 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juba Rescue Centre</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Juba Rescue Centre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f7f9fc;
+      color: #1a2b4c;
+    }
+
+    /* ---------- TOP BAR ---------- */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      padding: 15px 40px;
+    }
+
+    .logo-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1a2b4c;
+      margin-right: 12px;
+    }
+
+    .centre-name {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      background: #fdfdfd;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #1a2b4c;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .donate-btn {
+      background: #1a2b4c;
+      color: white !important;
+      padding: 8px 18px;
+      border-radius: 20px;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      height: 85vh;
+      background: url("hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding-left: 60px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .hero-text {
+      position: relative;
+      color: white;
+      max-width: 600px;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* ---------- STATS ---------- */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 60px 40px;
+      background: #eaf0ff;
+      text-align: center;
+    }
+
+    .stat h2 {
+      font-size: 42px;
+    }
+
+    /* ---------- CTA ---------- */
+    .cta {
+      position: relative;
+      margin: 80px;
+      height: 350px;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+
+    .cta img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+
+    .cta-text {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      color: white;
+      max-width: 400px;
+    }
+
+    .cta-text h2 {
+      font-size: 34px;
+    }
+
+    .cta-text button {
+      margin-top: 15px;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      background: #ff6b6b;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #1a2b4c;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+  </style>
 </head>
+
 <body>
-<!-- TOP BAR -->
-<div class="top-bar">
-  <img src="images/logo-circle.png" alt="Juba Logo">
-  <span>JUBA RESCUE CENTRE</span>
-</div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="education.html">Education</a>
-  <a href="amenities.html">Basic Amenities</a>
-  <a href="donors.html">Donors & Partners</a>
-  <a href="projects.html">Projects</a>
-  <a href="faqs.html">FAQs</a>
-  <a href="donate.html" class="donate-btn">Donate</a> 
-</nav>
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="slideshow">
-            <div class="slide active" style="background-image: url('images/hero1.jpg');"></div>
-            <div class="slide" style="background-image: url('images/hero2.jpg');"></div>
-            <div class="slide" style="background-image: url('images/hero3.jpg');"></div>
-        </div>
-        <div class="hero-text">
-            <h1>JUBA RESCUE CENTRE</h1>
-            <p>“Providing a safe home and education for every child”</p>
-        </div>
-    </section>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="logo-circle"></div>
+    <div class="centre-name">Juba Rescue Centre</div>
+  </div>
 
-    <!-- ABOUT SNAPSHOT -->
-    <section class="about-snapshot">
-        <div class="about-content">
-            <div class="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel libero et libero bibendum fermentum.</p>
-                <p>Phasellus sit amet turpis nec lacus facilisis tempor. Curabitur dignissim, sapien in malesuada placerat, leo enim.</p>
-                <a href="about.html" class="btn">Read More</a>
-            </div>
-            <div class="about-image">
-                <img src="images/about.jpg" alt="About Juba Rescue Centre">
-            </div>
-        </div>
-    </section>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="education.html">Education</a>
+    <a href="amenities.html">Basic Amenities</a>
+    <a href="donors.html">Donors & Partners</a>
+    <a href="projects.html">Projects</a>
+    <a href="donate.html" class="donate-btn">Donate</a>
+    <a href="faqs.html">FAQs</a>
+  </div>
 
-    <!-- IMPACT SECTION -->
-    <section class="impact">
-        <div class="impact-card">
-            <h2>Year Started</h2>
-            <p id="year-started">2012</p>
-        </div>
-        <div class="impact-card">
-            <h2>Children Supported</h2>
-            <p id="children-count">500</p>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Juba Rescue Centre</h1>
+      <p>
+        Providing safety, education, love and hope for vulnerable children
+        since 2012.
+      </p>
+    </div>
+  </section>
 
-    <!-- CTA SECTION -->
-    <section class="cta">
-        <div class="cta-overlay">
-            <h2>Your support helps us provide education, shelter, and hope.</h2>
-            <a href="donate.html" class="btn btn-donate">Donate Now</a>
-        </div>
-    </section>
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat">
+      <h2 id="years">2012 – 2025</h2>
+      <p>Years of Impact</p>
+    </div>
+    <div class="stat">
+      <h2 id="children">150+</h2>
+      <p>Children Rescued</p>
+    </div>
+    <div class="stat">
+      <h2>Weeks Old – 25</h2>
+      <p>Ages Supported</p>
+    </div>
+  </section>
 
-<script src="js/main.js"></script>
+  <section class="home-story">
+  <div class="story-text">
+    <h2>Our Story</h2>
+    <p>
+      Since 2012, Juba Rescue Centre has provided a safe home for vulnerable
+      children, ensuring access to education, healthcare, and emotional support.
+    </p>
+    <p>
+      Through the support of donors, volunteers, and partners, the centre has
+      transformed lives and continues to build a future filled with dignity
+      and opportunity.
+    </p>
+  </div>
+
+  <div class="story-slideshow">
+    <img src="story1.jpg" alt="Children at Juba Rescue Centre">
+  </div>
+</section>
+
+
+   <!-- CTA -->
+  <section class="cta-small">
+  <div class="cta-overlay">
+    <h2>Help Us Continue Changing Lives</h2>
+    <a href="donate.html">Donate Now</a>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Juba Rescue Centre. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
+
+      
+
