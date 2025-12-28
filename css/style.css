@@ -242,7 +242,7 @@ footer {
 
 /* STORY SECTION */
 .about-story {
-  background-color: #fff6cc; /* pale yellow */
+ background-color: #fafafa;
   padding: 60px 8%;
 }
 
@@ -282,7 +282,7 @@ footer {
 
 /* MISSION & VISION */
 .mission-vision {
-  background-color: #fff6cc;
+ background-color: #fafafa;
   padding: 60px 8%;
   display: flex;
   gap: 30px;
@@ -297,7 +297,7 @@ footer {
 
 /* IDENTITY */
 .identity {
-  background-color: #fff6cc;
+background-color: #fafafa;
   padding: 40px 0;
   text-align: center;
 }
@@ -309,7 +309,7 @@ footer {
 
 /* CTA */
 .about-cta {
-  background-color: #f1e3a4;
+background-color: #fafafa;
   text-align: center;
   padding: 50px 20px;
 }
