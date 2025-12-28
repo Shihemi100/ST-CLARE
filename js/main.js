@@ -136,3 +136,15 @@ if (project) {
     pocketBtn.href = "donation-pocket.html?item=food";
   }
 }
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+setInterval(() => {
+  slides.forEach((slide, index) => {
+    slide.style.opacity = '0';
+    slide.style.transition = 'opacity 1s';
+  });
+  slides[currentSlide].style.opacity = '1';
+  currentSlide = (currentSlide + 1) % totalSlides;
+}, 5000);
