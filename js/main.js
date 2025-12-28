@@ -136,15 +136,25 @@ if (project) {
     pocketBtn.href = "donation-pocket.html?item=food";
   }
 }
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
 
-setInterval(() => {
+  // 🚨 If no slides exist on the page, STOP the script
+  if (!slides.length) return;
+
+  let currentSlide = 0;
+
   slides.forEach((slide, index) => {
-    slide.style.opacity = '0';
-    slide.style.transition = 'opacity 1s';
+    slide.style.opacity = index === 0 ? "1" : "0";
+    slide.style.position = "absolute";
+    slide.style.top = "0";
+    slide.style.left = "0";
+    slide.style.transition = "opacity 1s ease-in-out";
   });
-  slides[currentSlide].style.opacity = '1';
-  currentSlide = (currentSlide + 1) % totalSlides;
-}, 5000);
+
+  setInterval(() => {
+    slides[currentSlide].style.opacity = "0";
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.opacity = "1";
+  }, 5000);
+});
