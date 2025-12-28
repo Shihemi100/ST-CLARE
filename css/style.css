@@ -210,7 +210,27 @@ footer {
 }
 
 /* ABOUT PAGE */
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 15px 50px;
+}
 
+.logo-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1a2b4c;
+  margin-right: 12px;
+}
+
+.centre-name {
+  font-size: 28px;
+  font-weight: 700;
+}
 /* HERO */
 .about-hero {
   height: 70vh;
@@ -295,33 +315,50 @@ footer {
   flex: 1;
 }
 
-/* IDENTITY */
-.identity {
-background-color: #fafafa;
-  padding: 40px 0;
-  text-align: center;
+/* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
+  position: relative;
+  height: 90vh;
+  background: url("donate-cta.jpg") center/cover no-repeat;
 }
 
-.identity h2 {
-  font-size: 2rem;
-  font-weight: bold;
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
 }
 
-/* CTA */
-.about-cta {
-background-color: #fafafa;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.donate-btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: maroon;
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
   color: white;
-  padding: 12px 25px;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
+  color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px;
+  font-weight: 600;
 }
 
 /* FOOTER */
