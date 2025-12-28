@@ -209,7 +209,16 @@ footer {
   padding: 30px;
 }
 
-/* ABOUT PAGE */
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fdfdfd;
+  color: #1a2b4c;
+}
+
 /* =========================
    TOP BAR
 ========================= */
@@ -231,42 +240,92 @@ footer {
   font-size: 28px;
   font-weight: 700;
 }
-/* HERO */
-.about-hero {
-  height: 70vh;
-  background: url("../images/about-hero.jpg") center/cover no-repeat;
-  position: relative;
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  padding: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.hero-overlay {
-  height: 100%;
+.navbar a {
+  text-decoration: none;
+  color: #1a2b4c;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar a.donate-btn {
+  background: #1a2b4c;
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+  background: url("../images/about-hero.jpg") center/cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(0,0,0,0.45);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  padding: 20px;
+  z-index: 2;
 }
 
-.hero-overlay h1 {
+.hero-text h1 {
   font-size: 3rem;
   font-weight: bold;
 }
 
-.hero-quote {
-  font-size: 1.1rem;
+.hero-text p {
   margin-top: 10px;
+  font-size: 1.1rem;
 }
 
-/* STORY SECTION */
+.read-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: white;
+  color: #1a2b4c;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+/* =========================
+   STORY SECTION
+========================= */
 .about-story {
- background-color: #fafafa;
+  background-color: #fdfdfd;
   padding: 60px 8%;
 }
 
-/* Timeline */
 .timeline {
   display: flex;
   justify-content: space-between;
@@ -277,7 +336,6 @@ footer {
   margin-bottom: 50px;
 }
 
-/* Content layout */
 .story-content {
   display: flex;
   gap: 40px;
@@ -300,9 +358,8 @@ footer {
   border-radius: 8px;
 }
 
-/* MISSION & VISION */
 .mission-vision {
- background-color: #fafafa;
+  background-color: #fdfdfd;
   padding: 60px 8%;
   display: flex;
   gap: 30px;
@@ -321,7 +378,7 @@ footer {
 .donate-hero {
   position: relative;
   height: 90vh;
-  background: url("donate-cta.jpg") center/cover no-repeat;
+  background: url("../images/donate-cta.jpg") center/cover no-repeat;
 }
 
 .donate-hero::after {
@@ -361,13 +418,16 @@ footer {
   font-weight: 600;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 .footer {
   background: #5a0000;
   color: white;
   text-align: center;
   padding: 20px;
 }
+
 /* EDUCATION PAGE */
 
 /* HERO */
