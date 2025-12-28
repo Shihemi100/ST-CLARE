@@ -1,3 +1,5 @@
+
+
 // HERO SLIDESHOW
 console.log("JS is connected");
 let slides = document.querySelectorAll('.slide');
