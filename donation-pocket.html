@@ -2,158 +2,183 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Donation Pocket | Juba Rescue Centre</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fde6ef;
-      color: #333;
-    }
+  <title>Donation Pocket | Juba Rescue Centre</title>
 
-    h1 {
-      text-align: center;
-      padding: 50px 20px 10px;
-      font-size: 3rem;
-      color: #e85a8c;
-    }
-
-    p.subtitle {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 1.1rem;
-    }
-
-    /* CARD GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      padding: 0 40px 60px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-    }
-
-    .img-placeholder {
-      height: 160px;
-      background: #f9b4cc;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-    }
-
-    .price {
-      position: absolute;
-      inset: 0;
-      background: rgba(232,90,140,0.9);
-      color: white;
-      font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 15px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .card:hover .price {
-      opacity: 1;
-    }
-
-    .card p {
-      margin-top: 15px;
-      font-weight: 600;
-    }
-
-    /* FORM */
-    .form-box {
-      display: none;
-      background: #fff;
-      max-width: 500px;
-      margin: 0 auto 60px;
-      padding: 30px;
-      border-radius: 15px;
-      text-align: center;
-    }
-
-    .form-box input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    .btn {
-      background: #e85a8c;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .success {
-      display: none;
-      text-align: center;
-      font-size: 1.3rem;
-      margin-bottom: 50px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+<!-- TOP BAR -->
+<div class="top-bar">
+  <img src="images/logo-circle.png" alt="Logo">
+  <span>JUBA RESCUE CENTRE</span>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="education.html">Education</a>
+  <a href="amenities.html">Basic Amenities</a>
+  <a href="donors.html">Donors & Partners</a>
+  <a href="projects.html">Projects</a>
+  <a href="faqs.html">FAQs</a>
+  <a href="donate.html" class="donate-btn">Donate</a>
+</nav>
+
+<!-- HERO -->
+<section class="pocket-hero">
   <h1>Donation Pocket 🎁</h1>
-  <p class="subtitle">Choose an item to donate directly to the children 💕</p>
 
-  <!-- CARDS -->
-  <section class="grid">
-    <div class="card" onclick="openForm('Baby Formula')">
-      <div class="img-placeholder">🍼</div>
-      <div class="price">KES 2,500</div>
-      <p>Donate a bottle of baby formula</p>
+  <p>
+    Support different areas of care and help us create
+    a safe and loving environment for every child.
+  </p>
+</section>
+
+<!-- DONATION SECTION -->
+<section class="donation-section">
+
+  <div class="donation-card" onclick="this.classList.toggle('flipped')">
+
+  <div class="card-inner">
+
+    <!-- FRONT -->
+    <div class="card-front">
+      <div class="emoji-icon">🧼</div>
+      <small>SANITARY</small>
+      <h3>Toiletries</h3>
+
+      <div class="hover-items">
+        🧻 🧴 🪥 🧼
+      </div>
     </div>
 
-    <div class="card" onclick="openForm('Tissues')">
-      <div class="img-placeholder">🧻</div>
-      <div class="price">KES 500</div>
-      <p>Donate a pack of tissues</p>
+    <!-- BACK -->
+    <div class="card-back">
+      <h3>What is included:</h3>
+
+      <ul>
+        <li>Tissues</li>
+        <li>Soap & disinfectant</li>
+        <li>Toothbrushes & toothpaste</li>
+        <li>Sanitary towels</li>
+      </ul>
     </div>
 
-    <div class="card" onclick="openForm('Clothes')">
-      <div class="img-placeholder">👕</div>
-      <div class="price">KES 3,000</div>
-      <p>Donate clothes & essentials</p>
+  </div>
+</div>
+    <!-- HEALTH -->
+    <div class="donation-card">
+
+      <div class="emoji-icon">🏥</div>
+
+      <small>HEALTH</small>
+
+      <h3>Medical Support</h3>
+
+      <div class="hover-items">
+        💊 🩺 🩹 🚑
+      </div>
+
+      <div class="hover-info">
+        Medical checkups, treatment, medicine, and emergency care.
+      </div>
+
     </div>
 
-    <div class="card" onclick="openForm('Food Supplies')">
-      <di
+    <!-- SANITARY -->
+    <div class="donation-card">
+
+      <div class="emoji-icon">🧼</div>
+
+      <small>SANITARY</small>
+
+      <h3>Toiletries</h3>
+
+      <div class="hover-items">
+        🧻 🧴 🪥 🧼
+      </div>
+
+      <div class="hover-info">
+        Soap, tissues, sanitary towels, disinfectants, and hygiene products.
+      </div>
+
+    </div>
+
+    <!-- SPORTS -->
+    <div class="donation-card">
+
+      <div class="emoji-icon">⚽</div>
+
+      <small>SPORTS</small>
+
+      <h3>Sports Equipment</h3>
+
+      <div class="hover-items">
+        ⚽ 🏀 🏆 🎽
+      </div>
+
+      <div class="hover-info">
+        Footballs, jerseys, games, and outdoor activity support.
+      </div>
+
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="donation-card">
+
+      <div class="emoji-icon">📚</div>
+
+      <small>EDUCATION</small>
+
+      <h3>School Supplies</h3>
+
+      <div class="hover-items">
+        ✏️ 📖 🖍️ 🎒
+      </div>
+
+      <div class="hover-info">
+        Books, stationery, school bags, and educational materials.
+      </div>
+
+    </div>
+
+    <!-- AMENITIES -->
+    <div class="donation-card">
+
+      <div class="emoji-icon">🛏️</div>
+
+      <small>AMENITIES</small>
+
+      <h3>Bedding & Clothing</h3>
+
+      <div class="hover-items">
+        🛌 🧥 👕 🧦
+      </div>
+
+      <div class="hover-info">
+        Blankets, mattresses, clothes, and daily comfort essentials.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  JUBA RESCUE CENTRE
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Juba Rescue Centre | All Rights Reserved
+</footer>
+
+</body>
+</html>

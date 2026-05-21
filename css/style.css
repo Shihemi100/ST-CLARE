@@ -58,65 +58,49 @@ body {
   border-radius: 20px;
 }
 
-/* =========================
-   HERO SLIDESHOW
-========================= */
-.hero {
+/* HERO SLIDESHOW (GLOBAL FIX) */
+.hero-slideshow {
   position: relative;
-  height: 90vh;
+  height: 70vh;
+  width: 100%;
   overflow: hidden;
 }
 
-.hero-slide {
+/* Each slide */
+.slide {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 1.2s ease-in-out;
 }
 
-.hero-slide.active {
-  opacity: 1;
-}
-
-.hero::after {
+/* Dark overlay for readability */
+.slide::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.45);
 }
-
-.hero-text {
+/* Text on LEFT */
+.hero-text-left {
   position: absolute;
-  left: 70px;
   top: 50%;
+  left: 60px;
   transform: translateY(-50%);
-  z-index: 2;
   color: white;
-  max-width: 600px;
+  max-width: 500px;
+  z-index: 2;
 }
 
-.hero-text h1 {
-  font-size: 60px;
-  margin-bottom: 15px;
+.hero-text-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
-.hero-text p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.read-more-btn {
-  display: inline-block;
-  margin-top: 22px;
-  padding: 10px 26px;
-  background: white;
-  color: #1a2b4c;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 25px;
+.hero-text-left p {
+  margin-top: 10px;
+  font-size: 1.1rem;
 }
 
 /* =========================
@@ -502,78 +486,64 @@ body {
   border-radius: 8px;
 }
 
-/* DONATE SECTION */
-.page-donate {
-  background: url("../images/donate-edu.jpg") center/cover no-repeat;
+/* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
   position: relative;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 90vh;
+  background: url("donate-cta.jpg") center/cover no-repeat;
 }
 
-.page-donate .donate-overlay {
-  background: rgba(0,0,0,0.25); /* slight dark overlay */
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
   color: white;
-  text-align: center;
-  padding: 20px;
+  max-width: 500px;
+  z-index: 1;
 }
 
-.page-donate .donate-overlay h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
-.page-donate .donate-btn {
-  background: #004080;
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
   color: white;
-  padding: 12px 25px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px;
+  font-weight: 600;
 }
 
-/* IDENTITY SECTION */
-.identity {
-  background-color: #d6edff;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.identity h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #004080;
-}
-
-/* FOOTER */
-.footer {
-  background: #004080;
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #1a2b4c;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
 }
 
-/* RESPONSIVE ADJUSTMENTS */
-@media (max-width: 768px) {
-  .edu-item {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .edu-item.reverse {
-    flex-direction: column;
-  }
 
-  .edu-img {
-    max-width: 100%;
-  }
-}
 /* BASIC AMENITIES PAGE */
 
 /* HERO */
@@ -723,6 +693,219 @@ body {
     flex-direction: column;
     gap: 15px;
   }
+  /* =========================
+   AMENITY POPUPS
+========================= */
+
+.amenity-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(0.8);
+
+  width: 75%;
+  height: 70vh;
+
+  background: white;
+
+  border-radius: 25px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.4s ease;
+
+  z-index: 999;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* SHOW POPUPS */
+
+.accommodation-hover:hover ~ .accommodation-popup,
+.food-hover:hover ~ .food-popup,
+.medical-hover:hover ~ .medical-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* CONTENT */
+
+.popup-content {
+  display: flex;
+  height: 100%;
+}
+
+/* LEFT */
+
+.popup-left {
+  flex: 1;
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popup-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.popup-left p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* RIGHT */
+
+.popup-right {
+  flex: 1;
+  position: relative;
+}
+
+.popup-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* WALLPAPER THEMES */
+
+.hearts-bg {
+  background:
+    url('images/hearts-bg.png'),
+    #ffd6e7;
+}
+
+.food-bg {
+  background:
+    url('images/food-pattern.png'),
+    #fff1c7;
+}
+
+.medical-bg {
+  background:
+    url('images/medical-pattern.png'),
+    #d6edff;
+}
+
+/* ICON HOVER */
+
+.amenity-item:hover {
+  transform: translateY(-8px) scale(1.1);
+}
+/* =========================
+   AMENITY POPUP SYSTEM
+========================= */
+
+.popup-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:0.3s ease;
+
+  z-index:9999;
+}
+
+.popup-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.popup-box{
+  width:80%;
+  height:75vh;
+
+  display:flex;
+
+  border-radius:25px;
+  overflow:hidden;
+
+  transform:scale(0.9);
+  transition:0.3s ease;
+}
+
+.popup-overlay.active .popup-box{
+  transform:scale(1);
+}
+
+/* SCROLL FIX */
+.popup-left{
+  flex:1;
+  padding:50px;
+  overflow-y:auto;
+}
+
+.popup-right{
+  flex:1;
+}
+
+.popup-right img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.hearts {
+  background: url("images/hearts-pattern.png"), #ffd6e7;
+  background-size: cover;
+}
+
+.food {
+  background: url("images/food-pattern.png"), #fff1c7;
+  background-size: cover;
+}
+
+.medical {
+  background: url("images/medical-pattern.png"), #d6edff;
+  background-size: cover;
+}
+
+.clothes {
+  background: url("images/clothes-pattern.png"), #ecd9ff;
+  background-size: cover;
+}
+
+.water {
+  background: url("images/water-pattern.png"), #d8ffe1;
+  background-size: cover;
+}
+.hearts{
+  background: url("images/hearts-pattern.png"), #ffd6e7;
+  background-size: cover;
+}
+
+.food{
+  background: url("images/food-pattern.png"), #fff1c7;
+  background-size: cover;
+}
+
+.medical{
+  background: url("images/medical-pattern.png"), #d6edff;
+  background-size: cover;
+}
+
+.clothes{
+  background: url("images/clothes-pattern.png"), #ecd9ff;
+  background-size: cover;
+}
+
+.water{
+  background: url("images/water-pattern.png"), #d8ffe1;
+  background-size: cover;
+}
 }
 /* DONORS HERO / SLIDESHOW */
 .donors-hero {
@@ -801,6 +984,63 @@ body {
 .prev:hover, .next:hover {
   color: #000;
 }
+/* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
+  position: relative;
+  height: 90vh;
+  background: url("donate-cta.jpg") center/cover no-repeat;
+}
+
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #1a2b4c;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+
 
 /* Donation animations, content, CTA, identity, footer reuse previous CSS */
 /* FAQ PAGE */
@@ -882,6 +1122,61 @@ body {
   padding: 12px;
   border-radius: 5px;
   cursor: pointer;
+}
+/* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
+  position: relative;
+  height: 90vh;
+  background: url("donate-cta.jpg") center/cover no-repeat;
+}
+
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #1a2b4c;
+  color: white;
+  text-align: center;
+  padding: 30px;
 }
 /* PROJECTS PAGE */
 
@@ -1028,35 +1323,244 @@ body {
   background-position: center;
   position: relative;
 }
-
-.hero-text-left {
-  position: absolute;
-  top: 50%;
-  left: 60px;
-  transform: translateY(-50%);
-  color: white;
-  max-width: 500px;
+/* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
+  position: relative;
+  height: 90vh;
+  background: url("donate-cta.jpg") center/cover no-repeat;
 }
 
-.hero-text-left h1 {
-  font-size: 3rem;
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #1a2b4c;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+/* =========================
+   DONATION POCKET
+========================= */
+
+/* HERO */
+.pocket-hero {
+  background: #ffd6e7;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.pocket-hero h1 {
+  font-size: 2.5rem;
+  color: maroon;
+}
+
+.pocket-hero p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* SECTION BACKGROUND */
+.donation-section {
+  background: #ffeaf3;
+  padding: 50px 5%;
+}
+
+/* GRID (COMPACT) */
+.donation-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  justify-items: center;
+}
+
+/* CARD WRAPPER */
+.donation-card {
+  width: 100%;
+  max-width: 200px;
+  perspective: 1000px;
+}
+
+/* INNER FLIP BOX */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+/* FLIP ON CLICK */
+.donation-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT + BACK */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* BACK SIDE */
+.card-back {
+  transform: rotateY(180deg);
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+/* ICON */
+.emoji-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+/* LABEL */
+.donation-card small {
+  color: maroon;
+  font-size: 0.7rem;
   font-weight: bold;
 }
 
-.hero-text-left p {
-  margin-top: 10px;
-  font-size: 1.1rem;
+/* TITLE */
+.donation-card h3 {
+  font-size: 0.95rem;
+  margin: 8px 0;
 }
 
-/* Slideshow animation */
-@keyframes slideAnimation {
-  0% { transform: translateX(0%); }
-  20% { transform: translateX(0%); }
-  25% { transform: translateX(-100%); }
-  45% { transform: translateX(-100%); }
-  50% { transform: translateX(-200%); }
-  70% { transform: translateX(-200%); }
-  75% { transform: translateX(-300%); }
-  95% { transform: translateX(-300%); }
-  100% { transform: translateX(-400%); }
+/* HOVER ITEMS (FRONT DECOR) */
+.hover-items {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  opacity: 0.7;
+}
+
+/* BACK LIST */
+.card-back ul {
+  padding-left: 16px;
+  margin-top: 10px;
+}
+
+.card-back li {
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+/* DONATE BUTTON */
+.final-donate {
+  text-align: center;
+  padding: 50px 20px;
+  background: #ffd6e7;
+}
+
+.donate-final-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: maroon;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+/* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
+  position: relative;
+  height: 90vh;
+  background: url("donate-cta.jpg") center/cover no-repeat;
+}
+
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #1a2b4c;
+  color: white;
+  text-align: center;
+  padding: 30px;
 }

@@ -109,23 +109,61 @@
       margin-top: 20px;
     }
 
-    /* CTA */
-    .cta {
-      background: #f9b4cc;
-      text-align: center;
-      padding: 50px 20px;
-      font-size: 2rem;
-      font-weight: 700;
-    }
+/* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
+  position: relative;
+  height: 90vh;
+  background: url("donate-cta.jpg") center/cover no-repeat;
+}
 
-    /* FOOTER */
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #1a2b4c;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
   </style>
 </head>
 <body>
@@ -205,16 +243,19 @@
     <button class="btn" style="margin-top:20px;">Submit Donation 💌</button>
   </div>
 
-  <!-- CTA -->
-  <section class="cta">
-    JUBA RESCUE CENTRE
+  <!-- DONATE CTA -->
+  <section class="donate-hero">
+    <div class="donate-text">
+      <h2>Help Us Continue Changing Lives</h2>
+      <p>Support vulnerable children by donating today.</p>
+      <a href="donate.html">Donate Now</a>
+    </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    © 2025 Juba Rescue Centre | All Rights Reserved
+  <footer class="footer">
+    <p>© 2025 Juba Rescue Centre. All rights reserved.</p>
   </footer>
-
   <script>
     // Counter animation
     function animate(id, target) {
@@ -239,13 +280,4 @@
 
 </body>
 </html>
-<h2 id="donate-title">Support Our Work</h2>
 
-<p id="donate-description">
-  Your contribution helps us care for vulnerable children.
-</p>
-
-<button id="donate-now-btn">Donate Now</button>
-<a id="donation-pocket-btn" href="donation-pocket.html">
-  Donation Pocket
-</a>

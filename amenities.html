@@ -4,9 +4,300 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Basic Amenities | Juba Rescue Centre</title>
+
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js"></script>
+
+  <style>
+
+    /* PAGE */
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#fdf6f9;
+      overflow-x:hidden;
+    }
+
+    /* HERO */
+    .hero-slideshow{
+      position:relative;
+      height:75vh;
+      overflow:hidden;
+    }
+
+    .slide{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background-size:cover;
+      background-position:center;
+      animation:fade 12s infinite;
+    }
+
+    .slide:nth-child(2){
+      animation-delay:6s;
+    }
+
+    @keyframes fade{
+      0%{opacity:0;}
+      10%{opacity:1;}
+      45%{opacity:1;}
+      55%{opacity:0;}
+      100%{opacity:0;}
+    }
+
+    .hero-text-left{
+      position:absolute;
+      bottom:80px;
+      left:60px;
+      color:white;
+      max-width:500px;
+    }
+
+    .hero-text-left h1{
+      font-size:4rem;
+      margin-bottom:10px;
+    }
+
+    .hero-text-left p{
+      font-size:1.2rem;
+      line-height:1.6;
+    }
+
+    /* INTRO */
+    .amenities-intro{
+      display:flex;
+      gap:40px;
+      padding:70px 8%;
+      align-items:center;
+      background:#fff3f7;
+    }
+
+    .intro-text{
+      flex:1;
+      line-height:1.9;
+      font-size:1rem;
+    }
+
+    .intro-img{
+      flex:1;
+    }
+
+    .intro-img img{
+      width:100%;
+      border-radius:20px;
+      height:350px;
+      object-fit:cover;
+    }
+
+    /* EMOJI SECTION */
+    .amenities-nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:40px;
+      padding:70px 20px;
+      background:#ffe5ef;
+    }
+
+    .amenity-item{
+      text-align:center;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .amenity-item:hover{
+      transform:translateY(-8px) scale(1.08);
+    }
+
+    .icon-placeholder{
+      width:90px;
+      height:90px;
+      background:white;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2.8rem;
+      margin:auto;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .amenity-item p{
+      margin-top:12px;
+      font-weight:bold;
+      color:#7a1f47;
+    }
+
+    /* POPUP */
+    .popup-overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.45);
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      opacity:0;
+      visibility:hidden;
+
+      transition:0.3s ease;
+
+      z-index:9999;
+    }
+
+    .popup-overlay.active{
+      opacity:1;
+      visibility:visible;
+    }
+
+    .popup-box{
+      width:78%;
+      height:72vh;
+
+      background:white;
+      border-radius:30px;
+
+      overflow:hidden;
+
+      display:flex;
+
+      transform:scale(0.8);
+      transition:0.3s ease;
+    }
+
+    .popup-overlay.active .popup-box{
+      transform:scale(1);
+    }
+
+    /* LEFT */
+    .popup-left{
+      flex:1;
+      padding:60px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .popup-left h2{
+      font-size:2.5rem;
+      margin-bottom:20px;
+      color:#7a1f47;
+    }
+
+    .popup-left p{
+      line-height:1.9;
+      font-size:1rem;
+    }
+
+    /* RIGHT */
+    .popup-right{
+      flex:1;
+      position:relative;
+    }
+
+    .popup-right img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* THEMES */
+
+    .pink{
+      background:
+      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+      #ffd6e7;
+    }
+
+    .yellow{
+      background:
+      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+      #fff0b3;
+    }
+
+    .blue{
+      background:
+      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+      #d6edff;
+    }
+
+    .purple{
+      background:
+      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+      #ecd9ff;
+    }
+
+    .green{
+      background:
+      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+      #d8ffe1;
+    }
+
+    /* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
+  position: relative;
+  height: 90vh;
+  background: url("donate-cta.jpg") center/cover no-repeat;
+}
+
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #1a2b4c;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+
+  </style>
 </head>
+
 <body>
+
 <!-- TOP BAR -->
 <div class="top-bar">
   <img src="images/logo-circle.png" alt="Juba Logo">
@@ -22,84 +313,186 @@
   <a href="donors.html">Donors & Partners</a>
   <a href="projects.html">Projects</a>
   <a href="faqs.html">FAQs</a>
-  <a href="donate.html" class="donate-btn">Donate</a> 
+  <a href="donate.html" class="donate-btn">Donate</a>
 </nav>
-<!-- HERO SECTION -->
+
+<!-- HERO -->
 <section class="hero-slideshow">
-  <div class="slides">
-    <div class="slide" style="background-image: url('images/hero1.jpg');">
-      <div class="hero-text-left">
-        <h1>Page Title Here</h1>
-        <p>Short quote or description goes here.</p>
-      </div>
+
+  <div class="slide" style="background-image:url('images/education1.jpg');">
+    <div class="hero-text-left">
+      <h1>Basic Amenities</h1>
+      <p>
+        Creating a safe and supportive environment for every child.
+      </p>
     </div>
-    <div class="slide" style="background-image: url('images/hero2.jpg');">
-      <div class="hero-text-left">
-        <h1>Page Title Here</h1>
-        <p>Short quote or description goes here.</p>
-      </div>
+  </div>
+
+  <div class="slide" style="background-image:url('images/education2.jpg');">
+    <div class="hero-text-left">
+      <h1>Care & Comfort</h1>
+      <p>
+        Providing daily essentials through compassion and community support.
+      </p>
     </div>
-    <!-- Add more slides as needed -->
+  </div>
+
+</section>
+
+<!-- INTRO -->
+<section class="amenities-intro">
+
+  <div class="intro-text">
+    <p>
+      Juba Rescue Centre continues to provide children with essential needs
+      including accommodation, food, healthcare, clothing, clean water,
+      and electricity. Despite ongoing challenges, the centre remains committed
+      to creating a safe, caring, and nurturing environment where every child
+      feels protected and valued.
+    </p>
+  </div>
+
+  <div class="intro-img">
+    <img src="images/amenities-main.jpg">
+  </div>
+
+</section>
+
+<!-- EMOJIS -->
+<section class="amenities-nav">
+
+  <div class="amenity-item"
+       data-title="Accommodation 🏠"
+       data-text="Many children rely on shared spaces, donated bedding, and temporary housing due to the lack of a permanent home for the centre."
+       data-image="images/room1.jpg"
+       data-bg="hearts">
+
+    <div class="icon-placeholder">🏠</div>
+    <p>Accommodation</p>
+  </div>
+
+  <div class="amenity-item"
+       data-title="Food & Nutrition 🍎"
+       data-text="Daily meals, milk, fruits, and nutritional support are made possible through community donations and support."
+       data-image="images/food1.jpg"
+       data-bg="food">
+
+    <div class="icon-placeholder">🍎</div>
+    <p>Food</p>
+  </div>
+
+  <div class="amenity-item"
+       data-title="Medical Care 💊"
+       data-text="Children regularly require medicine, treatment, healthcare assessments, and emergency support."
+       data-image="images/medical1.jpg"
+       data-bg="medical">
+
+    <div class="icon-placeholder">💊</div>
+    <p>Medical Care</p>
+  </div>
+
+  <div class="amenity-item"
+       data-title="Clothing & Essentials 🧥"
+       data-text="Clothing, blankets, shoes, toiletries, and personal essentials continue to support the children's daily wellbeing."
+       data-image="images/clothes1.jpg"
+       data-bg="clothes">
+
+    <div class="icon-placeholder">🧥</div>
+    <p>Clothing</p>
+  </div>
+
+  <div class="amenity-item"
+       data-title="Water & Electricity 💧"
+       data-text="Clean water and stable electricity remain important needs in supporting the children's safety and daily living."
+       data-image="images/water1.jpg"
+       data-bg="water">
+
+    <div class="icon-placeholder">💧</div>
+    <p>Water & Electricity</p>
+  </div>
+
+</section>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popupOverlay">
+
+  <div class="popup-box" id="popupBox">
+
+    <div class="popup-left">
+      <h2 id="popupTitle"></h2>
+      <p id="popupText"></p>
+    </div>
+
+    <div class="popup-right">
+      <img id="popupImage" src="">
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ================= DONATE HERO CTA ================= -->
+<section class="donate-hero">
+  <div class="donate-text">
+    <h2>Donate Now</h2>
+    <p>
+      Your generosity helps us provide food, shelter, education,
+      and hope for children in need.
+    </p>
+    <a href="donate.html">Support a Child</a>
   </div>
 </section>
 
-  <!-- INTRODUCTION -->
-  <section class="amenities-intro">
-    <div class="intro-text">
-      <p>
-        At Juba Rescue Centre, we provide children with essential resources including accommodation,
-        nutritious food, medical care, clothing, and clean water & electricity. Every effort is
-        made to create a safe and nurturing environment for growth and wellbeing.
-      </p>
-    </div>
-    <div class="intro-img">
-      <div class="image-placeholder">Image</div>
-    </div>
-  </section>
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2025 Juba Rescue Centre. All Rights Reserved.</p>
+  <p>Contact us: Saintclarehouse22@gmail.com or Posaintclarehouse@gmial.com</p>
+  <p>Telephone:</p>
+</footer>
+<!-- JS -->
+<script>
 
-  <!-- AMENITIES NAV -->
-  <section class="amenities-nav">
-    <div class="amenity-item" data-section="accommodation">
-      <div class="icon-placeholder">🏠</div>
-      <p>Accommodation</p>
-    </div>
-    <div class="amenity-item" data-section="food">
-      <div class="icon-placeholder">🍎</div>
-      <p>Food</p>
-    </div>
-    <div class="amenity-item" data-section="medical">
-      <div class="icon-placeholder">💊</div>
-      <p>Medical Care</p>
-    </div>
-    <div class="amenity-item" data-section="clothing">
-      <div class="icon-placeholder">🧥</div>
-      <p>Clothing & Essentials</p>
-    </div>
-    <div class="amenity-item" data-section="water">
-      <div class="icon-placeholder">💧</div>
-      <p>Water & Electricity</p>
-    </div>
-  </section>
+const amenities = document.querySelectorAll(".amenity-item");
 
-  <!-- DONATE SECTION -->
-  <section class="page-donate">
-    <div class="donate-overlay">
-      <h3>Help Us Provide Basic Necessities to Every Child</h3>
-      <a href="donate.html" class="donate-btn">Donate Now</a>
-    </div>
-  </section>
+const popupOverlay = document.getElementById("popupOverlay");
+const popupBox = document.getElementById("popupBox");
 
-  <!-- IDENTITY SECTION -->
-  <section class="identity">
-    <h2>Juba Rescue Centre</h2>
-  </section>
+const popupTitle = document.getElementById("popupTitle");
+const popupText = document.getElementById("popupText");
+const popupImage = document.getElementById("popupImage");
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Juba Rescue Centre. All rights reserved.</p>
-  </footer>
+amenities.forEach(item => {
 
-  <!-- JS -->
-  <script src="js/main.js"></script>
+  item.addEventListener("mouseenter", () => {
+
+    popupTitle.innerText = item.dataset.title;
+    popupText.innerText = item.dataset.text;
+    popupImage.src = item.dataset.image;
+
+    popupBox.className = "popup-box";
+    popupBox.classList.add(item.dataset.bg);
+
+    popupOverlay.classList.add("active");
+
+  });
+
+  item.addEventListener("mouseleave", () => {
+
+    popupOverlay.classList.remove("active");
+
+  });
+
+});
+
+popupOverlay.addEventListener("mouseenter", () => {
+  popupOverlay.classList.add("active");
+});
+
+popupOverlay.addEventListener("mouseleave", () => {
+  popupOverlay.classList.remove("active");
+});
+
+</script>
+
 </body>
 </html>
