@@ -1,0 +1,109 @@
+/* =========================
+   STORY SECTION
+========================= */
+.about-story {
+  background-color: #fdfdfd;
+  padding: 60px 8%;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  color: maroon;
+  font-weight: bold;
+  border-bottom: 2px solid maroon;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+.story-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.story-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.story-slideshow {
+  flex: 1;
+  max-width: 350px;
+}
+
+.story-slideshow img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.mission-vision {
+  background-color: #fdfdfd;
+  padding: 60px 8%;
+  display: flex;
+  gap: 30px;
+}
+
+.mv-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+/* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
+  position: relative;
+  height: 90vh;
+  background: url("../images/donate-cta.jpg") center/contain no-repeat;
+}
+
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #5a0000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

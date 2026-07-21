@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<!-- TOP BAR -->
-<div class="top-bar">
-  <img src="images/logo-circle.png" alt="Juba Logo">
-  <span>JUBA RESCUE CENTRE</span>
-</div>
+ <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="logo-circle"></div>
+    <div class="centre-name">JUBA RESCUE CENTRE</div>
+  </div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -21,79 +21,81 @@
   <a href="amenities.html">Basic Amenities</a>
   <a href="donors.html">Donors & Partners</a>
   <a href="projects.html">Projects</a>
-  <a href="faqs.html">FAQs</a>
   <a href="donate.html" class="donate-btn">Donate</a> 
+  <a href="faqs.html">FAQs</a>
+   
 </nav>
 <!-- HERO SECTION -->
-<section class="hero-slideshow">
-  <div class="slide" style="background-image: url('images/education1.jpg');">
-    <div class="hero-text-left">
-      <h1>Education</h1>
-      <p>Empowering children through learning and opportunity.</p>
-    </div>
-  </div>
+ <section class="hero">
 
-  <div class="slide" style="background-image: url('images/education2.jpg');">
-    <div class="hero-text-left">
-      <h1>Education</h1>
-      <p>Building brighter futures through knowledge.</p>
+    <div class="hero-slide active"
+         style="background-image:url('images/faqs/hero1.jpg');">
     </div>
-  </div>
+
+   
+    <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <h1>Frequently Asked Questions</h1>
+
+    <p class="hero-quote">
+        "Service to others is the rent you pay for your room here on earth."
+    </p>
+
+    <span class="hero-author">
+        — Muhammad Ali
+    </span>
+
+</div>
 </section>
-    <!-- Add more slides as needed -->
-  </div>
-</section>
+
 
 
   <!-- FAQ SECTION -->
   <section class="faq-section">
 
     <div class="faq-item">
-      <button class="faq-question">🏡 Who does Juba Rescue Centre support?</button>
+      <button class="faq-question"> Who does Juba Rescue Centre care for?</button>
       <div class="faq-answer">
         <p>
-          We support vulnerable and at-risk children by providing shelter, education,
-          healthcare, and emotional support in a safe environment.
+          Juba Rescue Centre provides care and protection for orphaned, abandoned, abused and vulnerable children, as well as young mothers and children rescued from difficult circumstances in South Sudan.
         </p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">📚 Do you provide education?</button>
+      <button class="faq-question"> Do you offer community fostering?</button>
       <div class="faq-answer">
         <p>
-          Yes. Education is a core pillar of our mission. We ensure children attend school
-          and receive academic and life-skills support.
+         Yes. Juba Rescue Centre supports community fostering where it is safe and appropriate for the child. Foster placements are carefully comsidered, and our social workers conduct regular follow-up visits to monitor the child's welfare, ensure they are thriving in their new wnvironment and provide ongoing support where needed.
         </p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">💖 How can I donate or help?</button>
+      <button class="faq-question">Can I donate from outside South Sudan?</button>
       <div class="faq-answer">
         <p>
-          You can donate through our Donate page, partner with us, volunteer,
-          or support us through advocacy and awareness.
+          Yes. We welcome support from individuals and organisations around the world. International donors can contribute through the available donation methods listed on our Donate page or contact us directly for other giving options.
         </p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">🌍 Where is Juba Rescue Centre located?</button>
+      <button class="faq-question">Can organizations or businesses partner with you?</button>
       <div class="faq-answer">
         <p>
-          Juba Rescue Centre operates locally while receiving support from both
-          local and international partners.
+          Absolutely. We welcome partnerships with NGOs, schools, businesses, churches, community organisations and other institutions that share our commitment to supporting vulnerable children.
         </p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">🤝 Can organizations partner with you?</button>
+      <button class="faq-question">What items are most urgently needed?</button>
       <div class="faq-answer">
         <p>
-          Absolutely. We welcome partnerships with NGOs, schools, companies,
-          and individuals who align with our mission.
+          The centre regularly needs food supplies, baby formula, diapers, school materials, toiletaries and other everyday materials. Kindly visit our Donation Pocket section; through the Donate page for the current list of individual priority needs.
         </p>
       </div>
     </div>
@@ -101,30 +103,137 @@
   </section>
 
   <!-- QUESTION FORM -->
-  <section class="faq-form-section">
+<section class="faq-form-section">
+
     <h2>Still have a question?</h2>
 
-    <form class="faq-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Question" rows="5" required></textarea>
-      <button type="submit">Submit Question</button>
+    <form
+        action="https://formsubmit.co/Saintclarehouse22@gmail.com"
+        method="POST"
+        class="faq-form">
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New FAQ Question">
+        
+
+        <!-- User details -->
+        <input
+            type="text"
+            name="Name"
+            placeholder="Your Name"
+            required>
+
+        <input
+            type="email"
+            name="Email"
+            placeholder="Your Email Address"
+            required>
+
+        <textarea
+            name="Question"
+            placeholder="Write your question here..."
+            rows="6"
+            required></textarea>
+
+        <button type="submit">Submit Question</button>
+
     </form>
-  </section>
+
+</section>
 
   <!-- DONATE CTA -->
   <section class="donate-hero">
     <div class="donate-text">
-      <h2>Help Us Continue Changing Lives</h2>
-      <p>Support vulnerable children by donating today.</p>
-      <a href="donate.html">Donate Now</a>
+      <h2>Be Part of the Next milestone</h2>
+      <p>Your support can help turn today's plans into tomorrow's reality.</p>
+      <a href="donate.html">Build With Us</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 Juba Rescue Centre. All rights reserved.</p>
-  </footer>
+ <footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- About -->
+        <div class="footer-column">
+
+            <h3>Juba Rescue Centre</h3>
+
+            <p>
+                Providing love, protection and hope for vulnerable children in South Sudan since 2012. Together, we can build brighter futures, one child at a time.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="education.html">Education</a>
+            <a href="amenities.html">Basic Amenities</a>
+            <a href="projects.html">Projects</a>
+            <a href="donors.html">Donors & Partners</a>
+            <a href="donate.html">Donate</a>
+            <a href="faqs.html">FAQS</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                saintclarehouse22@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                postsaintclarehouse@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 920 135 555
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 981 731 441
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Juba, South Sudan
+            </p>
+
+        </div>
+
+        <!-- Call to Action -->
+        <div class="footer-column">
+
+            <h3>Get Involved</h3>
+
+            <p>
+                Whether through donations, volunteering or partnerships, your support helps transform lives and create brighter futures for vulnerable children.
+            </p>
+
+            <a href="donate.html" class="footer-donate-btn">
+                Donate Today
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Juba Rescue Centre. All Rights Reserved.
+    </div>
+
+</footer>
 
   <script src="js/main.js"></script>
 </body>

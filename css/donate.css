@@ -1,0 +1,425 @@
+/* ==========================
+DONATE HERO
+========================== */
+
+.hero{
+    position:relative;
+    height:85vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/donate-hero.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+
+.hero-overlay{
+    width:90%;
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+/* ==========================
+BUTTONS
+========================== */
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:#c2185b;
+    color:#fff;
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    margin:10px;
+}
+
+.btn:hover{
+    background:#a3154d;
+    transform:translateY(-3px);
+}
+
+.btn.secondary{
+    background:#ffffff;
+    color:#c2185b;
+}
+
+.btn.secondary:hover{
+    background:#f3f3f3;
+}
+
+/* ==========================
+STATS
+========================== */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    padding:70px 8%;
+    background:#fff;
+}
+
+.stat{
+    background:#fff8fb;
+    width:220px;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.stat h2{
+    font-size:3rem;
+    color:#c2185b;
+    margin-bottom:10px;
+}
+
+/* ==========================
+CONTENT
+========================== */
+
+.content{
+    padding:80px 10%;
+    text-align:center;
+    background:#fdeef4;
+}
+
+.content h2{
+    font-size:2.5rem;
+    color:#800020;
+    margin-bottom:30px;
+}
+
+.content p{
+    max-width:900px;
+    margin:25px auto;
+    line-height:1.9;
+    font-size:1.08rem;
+}
+
+/* ==========================
+WAYS TO HELP
+========================== */
+
+.help-section{
+    padding:80px 8%;
+    background:#fff;
+}
+
+.help-section h2{
+    text-align:center;
+    color:#800020;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+.help-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.help-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.35s;
+}
+
+.help-card:hover{
+    transform:translateY(-8px);
+}
+
+.help-card img{
+    width:100%;
+    height:240px;
+    object-fit:contain;
+}
+
+.help-card h3{
+    text-align:center;
+    margin-top:25px;
+    color:#800020;
+}
+
+.help-card p{
+    padding:20px 30px;
+    line-height:1.8;
+    text-align:center;
+}
+
+.help-card .btn{
+    margin:25px auto 35px;
+    display:block;
+    width:220px;
+}
+
+/* ==========================
+POPUP
+========================== */
+
+.donate-popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-box{
+    width:90%;
+    max-width:650px;
+    background:#fff;
+    border-radius:25px;
+    padding:40px;
+    position:relative;
+    animation:popup .3s;
+}
+
+@keyframes popup{
+
+from{
+transform:scale(.8);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:28px;
+    font-size:36px;
+    cursor:pointer;
+}
+
+.bank-card{
+    background:#fdeef4;
+    padding:25px;
+    border-radius:18px;
+    margin:30px 0;
+}
+
+.bank-card p{
+    margin:12px 0;
+}
+
+.bank-card button{
+    margin-left:15px;
+    background:#c2185b;
+    color:white;
+    border:none;
+    padding:8px 18px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.popup-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+/* =========================
+   DONATE HERO (CTA)
+========================= */
+.donate-hero {
+  position: relative;
+  height: 90vh;
+  background: url("donate-cta.jpg") center/cover no-repeat;
+}
+
+.donate-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.donate-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.donate-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.donate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.donate-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #1a2b4c;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+
+.projects-wrapper{
+  background:#d6f0ff;
+  padding:60px 5%;
+}
+
+/* DONATION POPUP */
+
+.donate-popup{
+
+display:none;
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.65);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999;
+
+}
+
+.popup-content{
+
+background:white;
+
+width:90%;
+
+max-width:550px;
+
+padding:35px;
+
+border-radius:20px;
+
+position:relative;
+
+animation:pop .3s;
+
+}
+
+@keyframes pop{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.close-popup{
+
+position:absolute;
+
+top:18px;
+
+right:25px;
+
+font-size:35px;
+
+cursor:pointer;
+
+}
+
+.bank-details{
+
+background:#fde6ef;
+
+padding:20px;
+
+border-radius:15px;
+
+margin-top:20px;
+
+}
+
+.bank-details h3{
+
+color:#c2185b;
+
+margin-bottom:12px;
+
+}
+
+.bank-details button{
+
+background:#c2185b;
+
+color:white;
+
+border:none;
+
+padding:8px 15px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+margin-left:10px;
+
+}

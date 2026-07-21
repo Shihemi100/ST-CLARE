@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Pocket | Juba Rescue Centre</title>
 
-  <title>Donation Pocket | Juba Rescue Centre</title>
-
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-  <img src="images/logo-circle.png" alt="Logo">
-  <span>JUBA RESCUE CENTRE</span>
-</div>
+ <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="logo-circle"></div>
+    <div class="centre-name">JUBA RESCUE CENTRE</div>
+  </div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -25,160 +23,1000 @@
   <a href="amenities.html">Basic Amenities</a>
   <a href="donors.html">Donors & Partners</a>
   <a href="projects.html">Projects</a>
+  <a href="donate.html" class="donate-btn">Donate</a> 
   <a href="faqs.html">FAQs</a>
-  <a href="donate.html" class="donate-btn">Donate</a>
+  
 </nav>
 
-<!-- HERO -->
-<section class="pocket-hero">
-  <h1>Donation Pocket 🎁</h1>
 
-  <p>
-    Support different areas of care and help us create
-    a safe and loving environment for every child.
-  </p>
+<!-- HERO SECTION -->
+ <section class="hero">
+
+    <div class="hero-slide active"
+         style="background-image:url('images/donations/hero1.jpg');">
+    </div>
+
+    <div class="hero-slide"
+         style="background-image:url('images/donations/hero2.jpg');">
+    </div>
+
+    <div class="hero-slide"
+         style="background-image:url('images/donations/hero3.jpg');">
+    </div>
+
+    <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <h1>Welcome to the Donation Pocket</h1>
+
+    <p class="hero-quote">
+        "The best way to find ourselves is to lose ourselves in the service of others."
+    </p>
+
+    <span class="hero-author">
+        — Mahatma Gandhi
+    </span>
+
+</div>
 </section>
 
-<!-- DONATION SECTION -->
+
+
+<!-- INTRO -->
+<section class="donation-intro">
+
+    <h2>Every Little Gift Makes a Difference</h2>
+
+    <p>
+        Welcome to the Donation Pocket! It's a simple way to discover the everyday needs of Juba Rescue Centre. Here you'll find the essential items that help provide food, healthcare, education, shelter and comfort for the children in our care.
+    </p>
+
+    <p>
+        Every card tells a story. Click on any card below to flip it over and learn more about that specific need. Whether you're able to donate a bag of rice, a school book, a mosquito net or even a packet of tissues; every contribution matters. Small acts of kindness come together to create lasting change.
+    </p>
+
+
+</section>
+
+<!-- ================= DONATION SECTION ================= -->
+
 <section class="donation-section">
 
-  <div class="donation-card" onclick="this.classList.toggle('flipped')">
+<!-- =================================================== -->
+<!-- FOOD -->
+<!-- =================================================== -->
 
-  <div class="card-inner">
+<h2 class="category-title">Food & Nutrition</h2>
 
-    <!-- FRONT -->
-    <div class="card-front">
-      <div class="emoji-icon">🧼</div>
-      <small>SANITARY</small>
-      <h3>Toiletries</h3>
+<div class="donation-cards">
 
-      <div class="hover-items">
-        🧻 🧴 🪥 🧼
-      </div>
+    <!-- FLOUR -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+                <img src="images/donations/meals.jpg" alt="Rice">
+
+                <div class="card-overlay">
+                    <h3>10kg Bag of Flour</h3>
+
+                    <p class="card-tagline">
+                        Feeds children daily.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>10kg bag of Maize meal</h3>
+                <p>Help provide nutritious meals for rescued children.</p>
+                <h4>KSh900 (7USD)</h4>
+                <button onclick="openItemPopup('10kg Bag of Maize meal', 'KSh 900')">
+                    Donate
+                </button>
+            </div>
+
+        </div>
     </div>
 
-    <!-- BACK -->
-    <div class="card-back">
-      <h3>What is included:</h3>
+    <!-- RICE -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
 
-      <ul>
-        <li>Tissues</li>
-        <li>Soap & disinfectant</li>
-        <li>Toothbrushes & toothpaste</li>
-        <li>Sanitary towels</li>
-      </ul>
+            <div class="card-front">
+                <img src="images/donations/rice.jpg" alt="Rice">
+
+                <div class="card-overlay">
+                    <h3>10kg Bag of Rice</h3>
+
+                    <p class="card-tagline">
+                        Feeds hungry little tummies.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>10KG BAG OF RICE</h3>
+                <p>Help provide nutritious meals for rescued children.</p>
+                <h4>KSh3500 (28USD)</h4>
+                <button onclick="openItemPopup('10 kg Bag of Rice', 'KSh 3,500')">
+                    Donate
+                </button>
+            </div>
+
+        </div>
     </div>
 
-  </div>
+    <!-- COOKING OIL -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+                <img src="images/donations/oil.jpg" alt="Rice">
+
+                <div class="card-overlay">
+                    <h3>5 Litres of Cooking Oil</h3>
+
+                    <p class="card-tagline">
+                        Every meal begins here.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>5 LITRES COOKING OIL</h3>
+                <p>Support healthy nutrition through donating cooking oil</p>
+                <h4>KSh1,500 (12USD)</h4>
+                <button onclick="openItemPopup('5 Litres of Cooking Oil', 'KSh 1,500')">
+                    Donate
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BEANS -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+                <img src="images/donations/beans.jpg" alt="Rice">
+
+                <div class="card-overlay">
+                    <h3>10kg Bag of Beans</h3>
+
+                    <p class="card-tagline">
+                        A nutritious meal shared together.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>10KG BEANS</h3>
+                <p>Help provide nutritious meals for rescued children.</p>
+                <h4>KSh2500 (20USD)</h4>
+                <button onclick="openItemPopup('10kg Bag of Beans', 'KSh 2,500')">
+                    Donate
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+     <!-- MILK -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+                <img src="images/donations/milk.jpg" alt="Rice">
+
+                <div class="card-overlay">
+                    <h3>1 Carton of Milk</h3>
+
+                    <p class="card-tagline">
+                        Nourishment for growing children.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>1 CARTON OF MILK</h3>
+                <p>Help provide nourishment for growing children.</p>
+                <h4>KSh2000 (16USD)</h4>
+                <button onclick="openItemPopup('1 Carton of Milk', 'KSh 2,000')">
+                    Donate
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- WATER -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+                <img src="images/donations/water.jpg" alt="Rice">
+
+                <div class="card-overlay">
+                    <h3>20 Litres Bottled Water</h3>
+
+                    <p class="card-tagline">
+                        Clean water changes everything.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>20 LITRES BOTTLED WATER</h3>
+                <p>Help provide clean drinking water for rescued children.</p>
+                <h4>KSh1300 (10 USD)</h4>
+                <button onclick="openItemPopup('20 Litres Bottled Water', 'KSh 1,300')">
+                    Donate
+                </button>
+            </div>
+
+        </div>
+    </div>
+
 </div>
-    <!-- HEALTH -->
-    <div class="donation-card">
 
-      <div class="emoji-icon">🏥</div>
+<!-- =================================================== -->
+<!-- MEDICAL -->
+<!-- =================================================== -->
 
-      <small>HEALTH</small>
+<h2 class="category-title">🏥 Medical Care</h2>
 
-      <h3>Medical Support</h3>
+<div class="donation-cards">
 
-      <div class="hover-items">
-        💊 🩺 🩹 🚑
-      </div>
+    <!-- VACCINATION -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
 
-      <div class="hover-info">
-        Medical checkups, treatment, medicine, and emergency care.
-      </div>
+            <div class="card-front">
 
+                <img src="images/donations/emergency.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>Vaccination of one baby</h3>
+
+                    <p class="card-tagline">
+                        Comfort for our youngest children.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Vaccination of one baby</h3>
+                <p>Support infant immunization and health clinics.</p>
+                <h4>KSh 4,000 (32 USD)</h4>
+                <button onclick="openItemPopup('Vaccination of one baby', 'KSh 4,000')">
+    Donate
+</button>
+            </div>
+
+        </div>
     </div>
 
-    <!-- SANITARY -->
-    <div class="donation-card">
+    <!-- VACCINATION -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
 
-      <div class="emoji-icon">🧼</div>
+            <div class="card-front">
 
-      <small>SANITARY</small>
+                <img src="images/donations/formula.jpg" alt="Rice">
 
-      <h3>Toiletries</h3>
+                <div class="card-overlay">
 
-      <div class="hover-items">
-        🧻 🧴 🪥 🧼
-      </div>
+                    <h3>Formula for one baby</h3>
 
-      <div class="hover-info">
-        Soap, tissues, sanitary towels, disinfectants, and hygiene products.
-      </div>
+                    <p class="card-tagline">
+                        Nourishment for growing infants.
+                    </p>
 
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Formula for one baby</h3>
+                <p>Provide infant formula for growing babies.</p>
+                <h4>KSh 3,000 (10 USD)</h4>
+                <button onclick="openItemPopup('Formula for one baby', 'KSh 3,000')">
+                    Donate
+                </button>
+            </div>
+
+        </div>
     </div>
 
-    <!-- SPORTS -->
-    <div class="donation-card">
+    <!-- VACCINATION -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
 
-      <div class="emoji-icon">⚽</div>
+            <div class="card-front">
 
-      <small>SPORTS</small>
+                <img src="images/donations/cot.jpg" alt="Rice">
 
-      <h3>Sports Equipment</h3>
+                <div class="card-overlay">
 
-      <div class="hover-items">
-        ⚽ 🏀 🏆 🎽
-      </div>
+                    <h3>Cot for one child</h3>
 
-      <div class="hover-info">
-        Footballs, jerseys, games, and outdoor activity support.
-      </div>
+                    <p class="card-tagline">
+                        Comfort for our youngest children.
+                    </p>
 
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Cot for one child</h3>
+                <p>Provide a safe and comfortable sleeping space for children.</p>
+                <h4>KSh 20000 (160 USD)</h4>
+                <button onclick="openItemPopup('Cot for one child', 'KSh 20,000')">
+    Donate
+</button>
+            </div>
+
+        </div>
+    </div> 
+
+    <!-- VACCINATION -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/diapers.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>Diapers for one child</h3>
+
+                    <p class="card-tagline">
+                        Keep children clean and comfortable.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Diapers for one child</h3>
+                <p>Provide diapers for children.</p>
+                <h4>KSh 600 (5 USD)</h4>
+                <button onclick="openItemPopup('Diapers for one child', 'KSh 600')">
+    Donate
+</button>
+            </div>
+
+        </div>
     </div>
 
-    <!-- EDUCATION -->
-    <div class="donation-card">
+    <!-- MOSQUITO NET -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
 
-      <div class="emoji-icon">📚</div>
+            <div class="card-front">
 
-      <small>EDUCATION</small>
+                <img src="images/donations/mosquito.jpg" alt="Rice">
 
-      <h3>School Supplies</h3>
+                <div class="card-overlay">
 
-      <div class="hover-items">
-        ✏️ 📖 🖍️ 🎒
-      </div>
+                    <h3>Treated Mosquito Net</h3>
 
-      <div class="hover-info">
-        Books, stationery, school bags, and educational materials.
-      </div>
+                    <p class="card-tagline">
+                        Protects children from mosquito-borne diseases.
+                    </p>
 
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Treated Mosquito Net</h3>
+                <p>Protect children from mosquito-borne diseases.</p>
+                <h4>KSh 600 (5 USD)</h4>
+                <button onclick="openItemPopup('Treated Mosquito Net', 'KSh 600')">
+                  Donate
+                  </button>
+            </div>
+
+        </div>
     </div>
 
-    <!-- AMENITIES -->
-    <div class="donation-card">
+    <!-- MEDICATION -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
 
-      <div class="emoji-icon">🛏️</div>
+            <div class="card-front">
 
-      <small>AMENITIES</small>
+                <img src="images/donations/medicine.jpg" alt="Rice">
 
-      <h3>Bedding & Clothing</h3>
+                <div class="card-overlay">
 
-      <div class="hover-items">
-        🛌 🧥 👕 🧦
-      </div>
+                    <h3>Medication for one child</h3>
 
-      <div class="hover-info">
-        Blankets, mattresses, clothes, and daily comfort essentials.
-      </div>
+                    <p class="card-tagline">
+                        Care when they need it most.
+                    </p>
 
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Medication for one child</h3>
+                <p>Purchase medicine and treatment supplies that last a month.</p>
+                <h4>KSh 3,000 (24 USD)</h4>
+                <button onclick="openItemPopup('Medication for one child', 'KSh 3,000')">
+    Donate
+</button>
+            </div>
+
+        </div>
     </div>
 
-  </div>
+</div>
+
+<!-- =================================================== -->
+<!-- CLOTHING -->
+<!-- =================================================== -->
+
+<h2 class="category-title">SANITARY ESSENTIALS</h2>
+
+<div class="donation-cards">
+
+    <!-- SOAP -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/soap.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>Multipurpose Soap</h3>
+
+                    <p class="card-tagline">
+                        Keeps children clean and healthy.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Multipurpose Soap</h3>
+                <p>Provide multipurpose soap for children.</p>
+                <h4>KSh 400 (3 USD)</h4>
+                <button onclick="openItemPopup('Multipurpose Soap', 'KSh 400')">
+                  Donate
+                  </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SANITARY TOWELS -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/sanitary.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>Sanitary towels</h3>
+
+                    <p class="card-tagline">
+                        Provides hygiene and comfort for female children.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Sanitary towels</h3>
+                <p>Provide a pack of sanitary towels for female children.</p>
+                <h4>KSh 300 (2 USD)</h4>
+                <button onclick="openItemPopup('Sanitary towels', 'KSh 300')">
+    Donate
+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TOILETRIES -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/toiletries.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>Toiletries</h3>
+
+                    <p class="card-tagline">
+                        Keeps children clean and healthy.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Toiletries</h3>
+                <p>Soap, toothpaste, sanitary towels and a pack of tissues.</p>
+                <h4>KSh 2000 (16 USD)</h4>
+                <button onclick="openItemPopup('Toiletries', 'KSh 2,000')">
+                  Donate
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<h2 class="category-title">SPORTS</h2>
+
+<div class="donation-cards">
+
+    <!-- FOOTBALLS -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/football.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>Footballs</h3>
+                    <p class="card-tagline">
+                        Encourages teamwork and physical activity.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Footballs</h3>
+                <p>Provide footballs for children to play with.</p>
+                <h4>KSh 1000 (8 USD)</h4>
+                <button onclick="openItemPopup('Footballs', 'KSh 1,000')">
+    Donate
+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SKIPPNG ROPES -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/ropes.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>Skipping ropes</h3>
+                    <p class="card-tagline">
+                        Promotes physical activity and fun.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Skipping ropes</h3>
+                <p>Provide skipping ropes for children to play with.</p>
+                <h4>KSh 500 (4 USD)</h4>
+                <button onclick="openItemPopup('Skipping ropes', 'KSh 500')">
+                  Donate
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- VOLLEYBALL EQUIPMENT -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/volleyball.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>Volleyball equipment</h3>
+                    <p class="card-tagline">
+                        Encourages teamwork and physical activity.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Volleyball equipment</h3>
+                <p>Provide volleyball equipment for children to play with.</p>
+                <h4>KSh 2500 (20 USD)</h4>
+               <button onclick="openItemPopup('Volleyball equipment', 'KSh 2,500')">
+    Donate
+</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<h2 class="category-title">EDUCATION</h2>
+
+<div class="donation-cards">
+
+    <!-- SCHOOL UNIFORM -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/uniform.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>School Uniform</h3>
+
+                    <p class="card-tagline">
+                        Opens the door to opportunity.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>School uniform</h3>
+                <p>Provide school uniforms for one child.</p>
+                <h4>KSh 3000 (24 USD)</h4>
+                <button onclick="openItemPopup('School uniform', 'KSh 3,000')">
+                  Donate
+                  </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SCHOOL SHOES -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/shoes.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>School shoes</h3>
+
+                    <p class="card-tagline">
+                        Opens the door to opportunity.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>School shoes</h3>
+                <p>Provide school shoes for one child.</p>
+                <h4>KSh 2500 (20 USD)</h4>
+                <button onclick="openItemPopup('School shoes', 'KSh 2,500')">
+    Donate
+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- STATIONERY -->
+    <div class="donation-card" onclick="flipCard(this)">
+        <div class="card-inner">
+
+            <div class="card-front">
+
+                <img src="images/donations/stationery.jpg" alt="Rice">
+
+                <div class="card-overlay">
+
+                    <h3>Stationery kit</h3>
+
+                    <p class="card-tagline">
+                        Every lesson begins with the right tools.
+                    </p>
+
+                    <span class="flip-text">
+                        Open Pocket →
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="card-back">
+                <h3>Stationery kit</h3>
+                <p>Books, notebooks, pens, and other school supplies.</p>
+                <h4>KSh 2000 (16 USD)</h4>
+                <button onclick="openItemPopup('Stationery kit', 2000)">
+    Donate
+</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
 
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  JUBA RESCUE CENTRE
-</section>
+<!-- ================= DONATION POPUP ================= -->
 
-<!-- FOOTER -->
-<footer>
-  © 2025 Juba Rescue Centre | All Rights Reserved
+<div id="itemDonatePopup" class="donation-popup">
+
+    <div class="popup-content">
+
+        <span class="close-popup" onclick="closeItemPopup()">&times;</span>
+
+        <h2 id="popupItemTitle">Provide an Item</h2>
+
+        <p class="popup-price">
+            Amount:
+            <strong id="popupItemPrice">KSh 0</strong>
+        </p>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Your Name (Optional)"
+            >
+
+            <input
+                type="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="Phone Number"
+                required
+            >
+
+            <button
+                type="button"
+                onclick="showPayment()"
+            >
+                Proceed to Payment
+            </button>
+
+        </form>
+
+        <div id="paymentDetails" style="display:none;">
+
+            <hr>
+
+            <h3>Payment Details</h3>
+
+            <p>
+                <strong>Item:</strong>
+                <span id="paymentItem"></span>
+            </p>
+
+            <p>
+                <strong>Amount:</strong>
+                <span id="paymentAmount"></span>
+            </p>
+
+            <p>
+                Till Number:
+                <strong>1234567</strong>
+            </p>
+
+            <p>
+                Account:
+                <strong>JUBA RESCUE CENTRE</strong>
+            </p>
+
+            <p>
+                Thank you for supporting our children ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/main.js"></script>
+
+<!-- DONATE CTA -->
+  <section class="donate-hero">
+    <div class="donate-text">
+      <h2>Together, We Can Do More</h2>
+      <p>No act of kindness is too small. Join our growing family of supporters creating lasting change.</p>
+      <a href="donate.html">Join Our Mission</a>
+    </div>
+  </section>
+
+ <footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- About -->
+        <div class="footer-column">
+
+            <h3>Juba Rescue Centre</h3>
+
+            <p>
+                Providing love, protection and hope for vulnerable children in South Sudan since 2012. Together, we can build brighter futures, one child at a time.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="education.html">Education</a>
+            <a href="amenities.html">Basic Amenities</a>
+            <a href="projects.html">Projects</a>
+            <a href="donors.html">Donors & Partners</a>
+            <a href="donate.html">Donate</a>
+            <a href="faqs.html">FAQS</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                saintclarehouse22@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                postsaintclarehouse@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 920 135 555
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 981 731 441
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Juba, South Sudan
+            </p>
+
+        </div>
+
+        <!-- Call to Action -->
+        <div class="footer-column">
+
+            <h3>Get Involved</h3>
+
+            <p>
+                Whether through donations, volunteering or partnerships, your support helps transform lives and create brighter futures for vulnerable children.
+            </p>
+
+            <a href="donate.html" class="footer-donate-btn">
+                Donate Today
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Juba Rescue Centre. All Rights Reserved.
+    </div>
+
 </footer>
+
 
 </body>
 </html>

@@ -1,0 +1,106 @@
+/* TEXT OVER IMAGE */
+
+
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.prev:hover, .next:hover {
+  color: #ffb6c1;
+}
+.project-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:15px 15px 0 0;
+    display:block;
+}
+
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    gap:50px;
+    max-width:1500px;
+    margin:auto;
+}
+/* CARD */
+.project-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    display:flex;
+    flex-direction:column;
+}
+/* ICON */
+.project-img{
+  font-size:3rem;
+}
+
+/* TEXT */
+.project-card h3{
+  margin:0;
+  color:#800020;
+}
+
+.project-card p{
+  color:#333;
+  line-height:1.5;
+}
+.projects-intro{
+    max-width:900px;
+    margin:70px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.projects-intro h2{
+    font-size:2.7rem;
+    color:#003366;
+    margin-bottom:20px;
+}
+.project-card h4{
+    margin-top:10px;
+    color:#8b2d5a;
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.projects-intro p{
+    font-size:1.15rem;
+    line-height:1.8;
+    color:#555;
+}
+.donors-hero{
+    position:relative;
+    width:100%;
+    height:70vh;
+    overflow:hidden;
+}
+
+.slideshow-container{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.project-card h3{
+    font-size:1.8rem;
+    color:#7a1f47;
+    margin:25px 30px 10px;
+}
+
+.project-card h4{
+    margin:20px 30px 10px;
+    color:#003366;
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.project-card p{
+    margin:0 30px 18px;
+    line-height:1.8;
+    color:#555;
+}

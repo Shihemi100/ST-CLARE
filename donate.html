@@ -7,171 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fde6ef;
-      color: #333;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      height: 80vh;
-      background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
-                  url("hero-placeholder.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-    }
-
-    /* STATS */
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      background: #fff;
-      padding: 40px 20px;
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat h2 {
-      font-size: 2.5rem;
-      color: #e85a8c;
-    }
-
-    /* TEXT SECTION */
-    .content {
-      max-width: 900px;
-      margin: auto;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .content p {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-    }
-
-    .btns {
-      margin-top: 30px;
-    }
-
-    .btn {
-      background: #e85a8c;
-      color: white;
-      border: none;
-      padding: 14px 25px;
-      margin: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 30px;
-    }
-
-    .btn.secondary {
-      background: #f9b4cc;
-      color: #333;
-    }
-
-    /* DONATE FORM */
-    .donate-form {
-      display: none;
-      background: #fff;
-      padding: 40px;
-      max-width: 600px;
-      margin: 40px auto;
-      border-radius: 12px;
-    }
-
-    .donate-form input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    .bank {
-      background: #fde6ef;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
-/* =========================
-   DONATE HERO (CTA)
-========================= */
-.donate-hero {
-  position: relative;
-  height: 90vh;
-  background: url("donate-cta.jpg") center/cover no-repeat;
-}
-
-.donate-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-
-.donate-text {
-  position: absolute;
-  bottom: 60px;
-  left: 60px;
-  color: white;
-  max-width: 500px;
-  z-index: 1;
-}
-
-.donate-text h2 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.donate-text p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.donate-text a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #ff6b6b;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background: #1a2b4c;
-  color: white;
-  text-align: center;
-  padding: 30px;
-}
-  </style>
 </head>
-<body>
 <!-- TOP BAR -->
-<div class="top-bar">
-  <img src="images/logo-circle.png" alt="Juba Logo">
-  <span>JUBA RESCUE CENTRE</span>
-</div>
+ <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="logo-circle"></div>
+    <div class="centre-name">JUBA RESCUE CENTRE</div>
+  </div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -181,81 +23,415 @@ footer {
   <a href="amenities.html">Basic Amenities</a>
   <a href="donors.html">Donors & Partners</a>
   <a href="projects.html">Projects</a>
-  <a href="faqs.html">FAQs</a>
   <a href="donate.html" class="donate-btn">Donate</a> 
+  <a href="faqs.html">FAQs</a>
+  
 </nav>
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Donate & Volunteer Now</h1>
-  </section>
+<!-- HERO SECTION -->
+ <section class="hero">
 
-  <!-- STATS -->
-  <section class="stats">
-    <div class="stat">
-      <h2 id="year">0</h2>
-      <p>Year Started</p>
+    <div class="hero-slide active"
+         style="background-image:url('images/donate/hero1.jpg');">
     </div>
-    <div class="stat">
-      <h2 id="children">0</h2>
-      <p>Children Rescued</p>
-    </div>
-    <div class="stat">
-      <h2 id="ages">0</h2>
-      <p>Ages Supported</p>
-    </div>
-  </section>
 
-  <!-- CONTENT -->
-  <section class="content">
-    <p>
-      Your generosity gives children safety, education, food and hope.
-      Every donation creates a real, visible impact in a child’s life.
+    <div class="hero-slide"
+         style="background-image:url('images/donate/hero2.jpg');">
+    </div>
+
+    <div class="hero-slide"
+         style="background-image:url('images/donate/hero3.jpg');">
+    </div>
+
+    <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <h1>Donate & Volunteer</h1>
+
+    <p class="hero-quote">
+        "There is more hunger in the world for love and appreciation than for bread."
     </p>
 
-    <p>
-      If you can’t donate financially, volunteering your time, skills,
-      or resources helps us build a stronger and safer future.
-    </p>
+    <span class="hero-author">
+        — Mother Teresa
+    </span>
 
-    <div class="btns">
-      <button class="btn" onclick="toggleDonate()">Donate Now</button>
-      <button class="btn secondary" onclick="window.location.href='donation-pocket.html'">
-        Donation Pocket 🎁
-      </button>
+</div>
+</section>
+
+
+
+
+<!-- ABOUT DONATING -->
+
+<!-- ABOUT -->
+<section class="about-support">
+
+    <div class="about-support-text">
+
+        <h2>Why Your Support Matters</h2>
+
+        <p>
+            Every child deserves more than survival; they deserve safety, education,
+            healthcare, nutritious meals and the opportunity to dream. At Juba Rescue
+            Centre, every act of generosity helps create a loving environment where
+            vulnerable children can heal, learn and build brighter futures.
+        </p>
+
+        <p>
+            Whether you choose to donate, volunteer your time, sponsor a project or
+            contribute essential supplies, your kindness becomes part of every child's
+            journey. Together, we can provide hope, stability and opportunities that
+            change lives for generations to come.
+        </p>
+
+        <a href="about.html" class="btn">
+            Learn More
+        </a>
+
     </div>
-  </section>
 
-  <!-- DONATE FORM -->
-  <div class="donate-form" id="donateForm">
-    <h2>Make a Donation 💖</h2>
+    <div class="about-support-image">
 
-    <input type="text" placeholder="Full Name">
-    <input type="email" placeholder="Email Address">
-    <input type="number" placeholder="Amount (KES)">
+        <img src="images/donate/about-home.jpg" alt="Children">
 
-    <div class="bank">
-      <strong>Bank Details</strong><br>
-      Bank: ABC Bank<br>
-      Account Name: Juba Rescue Centre<br>
-      Account No: 123456789
     </div>
 
-    <button class="btn" style="margin-top:20px;">Submit Donation 💌</button>
-  </div>
+</section>
+
+<!-- IMPACT -->
+
+<section class="impact-section">
+
+<div class="impact-left">
+
+<h2>Our Impact</h2>
+
+<div class="impact-item">
+
+<h3 id="year">2026</h3>
+
+<p>Serving Since</p>
+
+</div>
+
+<div class="impact-item">
+
+<h3 id="children">0</h3>
+
+<p>Children Supported</p>
+
+</div>
+
+<div class="impact-item">
+
+<h3 id="ages">0</h3>
+
+<p>Age Range</p>
+
+</div>
+
+</div>
+
+<div class="impact-right">
+
+<img src="images/donate/gallery1.jpg">
+
+<img src="images/donate/gallery2.jpg">
+
+<img src="images/donate/gallery3.jpg">
+<img src="images/donate/gallery4.jpg">
+
+</div>
+
+</section>
+
+<!-- WAYS TO HELP -->
+
+<section class="help-section" id="help">
+
+<h2>Ways You Can Help</h2>
+
+<div class="help-grid">
+
+<div class="help-card">
+
+<img src="images/donate/donate-money.jpg" alt="Donate Money">
+
+<h3>Donate Money</h3>
+
+<p>
+
+Your financial gift allows us to respond to the children's greatest needs while creating brighter futures every day.
+
+</p>
+
+<button class="btn" onclick="document.getElementById('donatePopup').style.display='flex'">
+     Donate Now
+</button>
+
+</div>
+
+<div class="help-card">
+
+<img src="images/donate/donate-goods.jpg" alt="Donate Goods">
+
+<h3>Donate Goods</h3>
+
+<p>
+
+From clothing and school supplies to food and toys, your donations help turn everyday necessities into lasting smiles.
+
+</p>
+
+<a href="donation-pocket.html" class="btn">
+
+View Donation Pocket
+
+</a>
+
+</div>
+
+<div class="help-card">
+
+<img src="images/donate/volunteer.jpg" alt="Volunteer">
+
+<h3>Volunteer</h3>
+
+<p>
+
+Whether you teach, mentor, nurse, counsel or simply care, your time can make a lifelong difference. Your skills can change lives.
+
+</p>
+
+<button class="btn" onclick="openVolunteer()">
+    Become a Volunteer
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DONATION POPUP -->
+
+<div class="donate-popup" id="donatePopup">
+
+<div class="popup-box">
+
+<span class="close" onclick="closeDonate()">&times;</span>
+
+<h2>Support Saint Clare House</h2>
+
+<p>
+
+Thank you for choosing to support vulnerable children.
+
+</p>
+
+<div class="bank-card">
+
+<h3>Bank Transfer</h3>
+
+<p><strong>Bank:</strong> ECOBANK SOUTH SUDAN LTD</p>
+
+<p><strong>Branch:</strong> KOITA COMPLEX BRANCH</p>
+
+<p><strong>Account Name:</strong> Saint Clare House</p>
+
+<p>
+
+<strong>Account Number:</strong>
+
+<span id="accountNumber">
+
+6940031360
+
+</span>
+
+<button
+onclick="navigator.clipboard.writeText('6940031360'); alert('Account number copied!');">
+    Copy
+</button>
+
+</p>
+
+<p><strong>Currency:</strong> USD</p>
+
+</div>
+
+<div class="popup-buttons">
+
+<button class="btn secondary"
+onclick="document.getElementById('donatePopup').style.display='none'">
+    Close
+</button>
+
+</div>
+
+</div>
+
+</div>
+<!-- VOLUNTEER POPUP -->
+
+<div class="volunteer-popup" id="volunteerPopup">
+
+<div class="popup-box">
+
+<span class="close" onclick="closeVolunteer()">&times;</span>
+
+<h2>Become a Volunteer:</h2>
+
+<p>
+Thank you for your interest in supporting Juba Rescue Centre.
+We welcome individuals who are passionate about making a difference in children's lives.
+</p>
+
+<p><strong>We'd love to hear from you! Please email us with: </strong></p>
+
+<ul>
+
+<li>Your full name</li>
+
+<li>Your profession or area of expertise</li>
+
+<li>The skills or services you can offer</li>
+
+<li>Your availability</li>
+
+<li>Whether you are volunteering remotely or in person</li>
+
+<li>Any previous experience working with children or NGOs (optional)</li>
+
+</ul>
+
+<p>
+
+<strong>Email:</strong><br>
+
+</a>
+
+</p>
+
+<div class="popup-buttons">
+
+<a
+href="mailto:carrenwshihemi@gmail.com?subject=Volunteer Application"
+class="btn">
+
+Send Email
+
+</a>
+
+<button class="btn secondary" onclick="closeVolunteer()">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<body>
 
   <!-- DONATE CTA -->
   <section class="donate-hero">
     <div class="donate-text">
-      <h2>Help Us Continue Changing Lives</h2>
-      <p>Support vulnerable children by donating today.</p>
+      <h2>Your Kindness Changes Everything</h2>
+      <p>A single act of generosity can provide safety, comfort and hope for a child who needs it most.</p>
       <a href="donate.html">Donate Now</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 Juba Rescue Centre. All rights reserved.</p>
-  </footer>
+ <footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- About -->
+        <div class="footer-column">
+
+            <h3>Juba Rescue Centre</h3>
+
+            <p>
+                Providing love, protection and hope for vulnerable children in South Sudan since 2012. Together, we can build brighter futures, one child at a time.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="education.html">Education</a>
+            <a href="amenities.html">Basic Amenities</a>
+            <a href="projects.html">Projects</a>
+            <a href="donors.html">Donors & Partners</a>
+            <a href="donate.html">Donate</a>
+            <a href="faqs.html">FAQS</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                saintclarehouse22@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                postsaintclarehouse@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 920 135 555
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 981 731 441
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Juba, South Sudan
+            </p>
+
+        </div>
+
+        <!-- Call to Action -->
+        <div class="footer-column">
+
+            <h3>Get Involved</h3>
+
+            <p>
+                Whether through donations, volunteering or partnerships, your support helps transform lives and create brighter futures for vulnerable children.
+            </p>
+
+            <a href="donate.html" class="footer-donate-btn">
+                Donate Today
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Juba Rescue Centre. All Rights Reserved.
+    </div>
+
+</footer>
+
+
   <script>
     // Counter animation
     function animate(id, target) {
@@ -268,15 +444,34 @@ footer {
       }, 20);
     }
 
-    animate("year", 2012);
-    animate("children", 500);
-    animate("ages", 20);
+   const year = document.getElementById("year");
+
+let currentYear = 2026;
+
+year.innerHTML = currentYear;
+
+const timer = setInterval(()=>{
+
+currentYear--;
+
+year.innerHTML=currentYear;
+
+if(currentYear==2012){
+
+clearInterval(timer);
+
+}
+
+},120);
+    animate("children", 300);
+    animate("ages",20);
 
     function toggleDonate() {
       const form = document.getElementById("donateForm");
       form.style.display = form.style.display === "block" ? "none" : "block";
     }
   </script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>

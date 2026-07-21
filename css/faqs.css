@@ -1,0 +1,176 @@
+/* FAQ PAGE */
+
+/* HERO */
+.donors-hero {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-img {
+  position: absolute;
+  inset: 0;
+  background-size: 99.5%;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+  filter: brightness(55%);
+}
+
+
+/* FAQ SECTION */
+.faq-section {
+  background-color: #fffafc;
+  padding: 60px 8%;
+  width: 80%;
+  margin: auto;
+}
+.faq-item {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #d6f0ff;
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.faq-question:hover {
+  background: #bfe6ff;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: white;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+  padding: 20px;
+  margin: 0;
+  line-height: 1.8;
+}
+/* =========================
+   FAQ FORM
+========================= */
+
+.faq-form-section{
+    background:#ffeef3;
+    padding:70px 20px;
+}
+
+.faq-form-section h2{
+    text-align:center;
+    color:#800020;
+    margin-bottom:35px;
+    font-size:2rem;
+}
+
+.faq-form{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.faq-form input,
+.faq-form textarea{
+
+    width:100%;
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+    outline:none;
+
+}
+
+.faq-form input:focus,
+.faq-form textarea:focus{
+
+    border-color:#800020;
+
+}
+
+.faq-form textarea{
+
+    resize:vertical;
+
+    min-height:150px;
+
+}
+
+.faq-form button{
+
+    background:#800020;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.faq-form button:hover{
+
+    background:#a0002a;
+
+}
+.faq-form input::placeholder,
+.faq-form textarea::placeholder{
+    font-size:14px;
+    color:#888;
+}

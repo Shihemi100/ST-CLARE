@@ -6,303 +6,15 @@
   <title>Basic Amenities | Juba Rescue Centre</title>
 
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/main.js"></script>
-
-  <style>
-
-    /* PAGE */
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#fdf6f9;
-      overflow-x:hidden;
-    }
-
-    /* HERO */
-    .hero-slideshow{
-      position:relative;
-      height:75vh;
-      overflow:hidden;
-    }
-
-    .slide{
-      position:absolute;
-      width:100%;
-      height:100%;
-      background-size:cover;
-      background-position:center;
-      animation:fade 12s infinite;
-    }
-
-    .slide:nth-child(2){
-      animation-delay:6s;
-    }
-
-    @keyframes fade{
-      0%{opacity:0;}
-      10%{opacity:1;}
-      45%{opacity:1;}
-      55%{opacity:0;}
-      100%{opacity:0;}
-    }
-
-    .hero-text-left{
-      position:absolute;
-      bottom:80px;
-      left:60px;
-      color:white;
-      max-width:500px;
-    }
-
-    .hero-text-left h1{
-      font-size:4rem;
-      margin-bottom:10px;
-    }
-
-    .hero-text-left p{
-      font-size:1.2rem;
-      line-height:1.6;
-    }
-
-    /* INTRO */
-    .amenities-intro{
-      display:flex;
-      gap:40px;
-      padding:70px 8%;
-      align-items:center;
-      background:#fff3f7;
-    }
-
-    .intro-text{
-      flex:1;
-      line-height:1.9;
-      font-size:1rem;
-    }
-
-    .intro-img{
-      flex:1;
-    }
-
-    .intro-img img{
-      width:100%;
-      border-radius:20px;
-      height:350px;
-      object-fit:cover;
-    }
-
-    /* EMOJI SECTION */
-    .amenities-nav{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:40px;
-      padding:70px 20px;
-      background:#ffe5ef;
-    }
-
-    .amenity-item{
-      text-align:center;
-      cursor:pointer;
-      transition:0.3s;
-    }
-
-    .amenity-item:hover{
-      transform:translateY(-8px) scale(1.08);
-    }
-
-    .icon-placeholder{
-      width:90px;
-      height:90px;
-      background:white;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:2.8rem;
-      margin:auto;
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
-    }
-
-    .amenity-item p{
-      margin-top:12px;
-      font-weight:bold;
-      color:#7a1f47;
-    }
-
-    /* POPUP */
-    .popup-overlay{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.45);
-
-      display:flex;
-      justify-content:center;
-      align-items:center;
-
-      opacity:0;
-      visibility:hidden;
-
-      transition:0.3s ease;
-
-      z-index:9999;
-    }
-
-    .popup-overlay.active{
-      opacity:1;
-      visibility:visible;
-    }
-
-    .popup-box{
-      width:78%;
-      height:72vh;
-
-      background:white;
-      border-radius:30px;
-
-      overflow:hidden;
-
-      display:flex;
-
-      transform:scale(0.8);
-      transition:0.3s ease;
-    }
-
-    .popup-overlay.active .popup-box{
-      transform:scale(1);
-    }
-
-    /* LEFT */
-    .popup-left{
-      flex:1;
-      padding:60px;
-
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-
-    .popup-left h2{
-      font-size:2.5rem;
-      margin-bottom:20px;
-      color:#7a1f47;
-    }
-
-    .popup-left p{
-      line-height:1.9;
-      font-size:1rem;
-    }
-
-    /* RIGHT */
-    .popup-right{
-      flex:1;
-      position:relative;
-    }
-
-    .popup-right img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    /* THEMES */
-
-    .pink{
-      background:
-      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-      #ffd6e7;
-    }
-
-    .yellow{
-      background:
-      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-      #fff0b3;
-    }
-
-    .blue{
-      background:
-      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-      #d6edff;
-    }
-
-    .purple{
-      background:
-      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-      #ecd9ff;
-    }
-
-    .green{
-      background:
-      linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-      #d8ffe1;
-    }
-
-    /* =========================
-   DONATE HERO (CTA)
-========================= */
-.donate-hero {
-  position: relative;
-  height: 90vh;
-  background: url("donate-cta.jpg") center/cover no-repeat;
-}
-
-.donate-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-
-.donate-text {
-  position: absolute;
-  bottom: 60px;
-  left: 60px;
-  color: white;
-  max-width: 500px;
-  z-index: 1;
-}
-
-.donate-text h2 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.donate-text p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.donate-text a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #ff6b6b;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background: #1a2b4c;
-  color: white;
-  text-align: center;
-  padding: 30px;
-}
-
-
-  </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <img src="images/logo-circle.png" alt="Juba Logo">
-  <span>JUBA RESCUE CENTRE</span>
-</div>
+ <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="logo-circle"></div>
+    <div class="centre-name">JUBA RESCUE CENTRE</div>
+  </div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -312,187 +24,360 @@ footer {
   <a href="amenities.html">Basic Amenities</a>
   <a href="donors.html">Donors & Partners</a>
   <a href="projects.html">Projects</a>
-  <a href="faqs.html">FAQs</a>
   <a href="donate.html" class="donate-btn">Donate</a>
+  <a href="faqs.html">FAQs</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero-slideshow">
+<!-- HERO SECTION -->
+ <section class="hero">
 
-  <div class="slide" style="background-image:url('images/education1.jpg');">
-    <div class="hero-text-left">
-      <h1>Basic Amenities</h1>
-      <p>
-        Creating a safe and supportive environment for every child.
-      </p>
+    <div class="hero-slide active"
+         style="background-image:url('images/amenities/hero1.jpg');">
     </div>
-  </div>
 
-  <div class="slide" style="background-image:url('images/education2.jpg');">
-    <div class="hero-text-left">
-      <h1>Care & Comfort</h1>
-      <p>
-        Providing daily essentials through compassion and community support.
-      </p>
+    <div class="hero-slide"
+         style="background-image:url('images/amenities/hero2.jpg');">
     </div>
-  </div>
 
-</section>
+    <div class="hero-slide"
+         style="background-image:url('images/amenities/hero3.jpg');">
+    </div>
 
-<!-- INTRO -->
-<section class="amenities-intro">
+    <div class="hero-overlay"></div>
 
-  <div class="intro-text">
-    <p>
-      Juba Rescue Centre continues to provide children with essential needs
-      including accommodation, food, healthcare, clothing, clean water,
-      and electricity. Despite ongoing challenges, the centre remains committed
-      to creating a safe, caring, and nurturing environment where every child
-      feels protected and valued.
+  <div class="hero-content">
+
+    <h1>Basic Amenities</h1>
+
+    <p class="hero-quote">
+        "There is no higher religion than human service. To work for the common good is the greatest creed."
     </p>
-  </div>
 
-  <div class="intro-img">
-    <img src="images/amenities-main.jpg">
-  </div>
-
-</section>
-
-<!-- EMOJIS -->
-<section class="amenities-nav">
-
-  <div class="amenity-item"
-       data-title="Accommodation 🏠"
-       data-text="Many children rely on shared spaces, donated bedding, and temporary housing due to the lack of a permanent home for the centre."
-       data-image="images/room1.jpg"
-       data-bg="hearts">
-
-    <div class="icon-placeholder">🏠</div>
-    <p>Accommodation</p>
-  </div>
-
-  <div class="amenity-item"
-       data-title="Food & Nutrition 🍎"
-       data-text="Daily meals, milk, fruits, and nutritional support are made possible through community donations and support."
-       data-image="images/food1.jpg"
-       data-bg="food">
-
-    <div class="icon-placeholder">🍎</div>
-    <p>Food</p>
-  </div>
-
-  <div class="amenity-item"
-       data-title="Medical Care 💊"
-       data-text="Children regularly require medicine, treatment, healthcare assessments, and emergency support."
-       data-image="images/medical1.jpg"
-       data-bg="medical">
-
-    <div class="icon-placeholder">💊</div>
-    <p>Medical Care</p>
-  </div>
-
-  <div class="amenity-item"
-       data-title="Clothing & Essentials 🧥"
-       data-text="Clothing, blankets, shoes, toiletries, and personal essentials continue to support the children's daily wellbeing."
-       data-image="images/clothes1.jpg"
-       data-bg="clothes">
-
-    <div class="icon-placeholder">🧥</div>
-    <p>Clothing</p>
-  </div>
-
-  <div class="amenity-item"
-       data-title="Water & Electricity 💧"
-       data-text="Clean water and stable electricity remain important needs in supporting the children's safety and daily living."
-       data-image="images/water1.jpg"
-       data-bg="water">
-
-    <div class="icon-placeholder">💧</div>
-    <p>Water & Electricity</p>
-  </div>
-
-</section>
-
-<!-- POPUP -->
-<div class="popup-overlay" id="popupOverlay">
-
-  <div class="popup-box" id="popupBox">
-
-    <div class="popup-left">
-      <h2 id="popupTitle"></h2>
-      <p id="popupText"></p>
-    </div>
-
-    <div class="popup-right">
-      <img id="popupImage" src="">
-    </div>
-
-  </div>
+    <span class="hero-author">
+        — Woodrow Wilson
+    </span>
 
 </div>
+</section>
 
-<!-- ================= DONATE HERO CTA ================= -->
+<!-- ================= EVERY CHILD DESERVES ================= -->
+
+<section class="deserves-section">
+
+    <div class="deserves-heading">
+
+        <span class="section-label">
+            EVERY CHILD DESERVES
+        </span>
+
+        <h2>More Than Basic Needs</h2>
+
+        <p>
+           Home is not defined by walls alone, but by the love, safety and sense of belonging shared within them. Since 2012, Juba Rescue Centre has worked tirelessly to create that kind of home for vulnerable children, building a close-knit family despite the many challenges it has faced. The children are proud of the community they have built together and grateful for the care they receive every day. What remains is the opportunity to strengthen the physical spaces around them so that the home they have created in their hearts is reflected in the environment they live in. Explore each tile below by clicking onto them to learn more.
+        </p>
+
+    </div>
+
+    <div class="deserves-grid">
+
+        <a href="#belonging" class="deserve-box">
+
+            <img src="images/amenities/love.png">
+
+            <h3>Love & Belonging</h3>
+
+        </a>
+
+        <a href="#accommodation" class="deserve-box">
+
+            <img src="images/amenities/home.png">
+
+            <h3>A Safe Place</h3>
+
+        </a>
+
+        <a href="#food" class="deserve-box">
+
+            <img src="images/amenities/meal.png">
+
+            <h3>Nutritious Meals</h3>
+
+        </a>
+
+        <a href="#medical" class="deserve-box">
+
+            <img src="images/amenities/health.png">
+
+            <h3>Healthcare</h3>
+
+        </a>
+
+        <a href="#water" class="deserve-box">
+
+            <img src="images/amenities/water.png">
+
+            <h3>Clean Water</h3>
+
+        </a>
+
+        <a href="#clothing" class="deserve-box">
+
+            <img src="images/amenities/clothes.png">
+
+            <h3>Clothing & Essentials</h3>
+
+        </a>
+
+    </div>
+
+</section>
+<!-- ================= AMENITIES SECTION ================= -->
+
+<section class="amenities-section">
+
+        <!-- LOVE AND BELONGING -->
+    <div id="belonging" class="amenity-row">
+
+        <div class="amenity-text">
+
+            <h2>Love & Belonging</h2>
+
+            <p>
+               While many needs remain unmet, love has never been one of them. From Mama Betty and the dedicated matrons to the staff and the children themselves, Juba Rescue Centre has grown into a family built on compassion, resilience and genuine care. Every shared meal, comforting embrace, burst of laughter and moment of encouragement reminds each child that they are valued and never alone.</p>
+
+             <p>It is the people within these walls who create a home. Their kindness, friendships and unwavering support light a warmth that cannot be measured by buildings or possessions. Together, they have built a community where every child is welcomed with dignity, hope and the promise of belonging.
+            </p>
+
+        </div>
+
+        <div class="amenity-card">
+            <img src="images/amenities/belonging1.jpg" alt="Love & Belonging">
+        </div>
+
+    </div> 
+
+    <!-- ACCOMMODATION -->
+    <div id="accommodation" class="amenity-row">
+
+        <div class="amenity-text">
+            <h2> Accommodation</h2>
+
+            <p>
+                Juba Rescue Centre provides rescued children with a safe place to stay despite not having a permanent home. The centre accommodates children using shared rooms, donated beds, mattresses and bedding while working towards more permanent housing.
+            </p>
+
+            <p>
+                As the number of children continues to increase, expanding accommodation remains one of the centre's greatest needs to ensure every child has a safe and comfortable place to call home.
+            </p>
+        </div>
+
+        <div class="amenity-card">
+            <img src="images/amenities/accomodation1.jpg" alt="Accommodation">
+        </div>
+
+    </div>
+
+    <!-- FOOD -->
+    <div id="food" class="amenity-row reverse">
+
+        <div class="amenity-text">
+            <h2> Food & Nutrition</h2>
+
+            <p>
+                Nutritious meals are provided through generous donations from supporters, partners and well-wishers. The availability of food often depends on the donations received.
+            </p>
+
+            <p>
+                Infant nutrition remains especially challenging due to the high cost of baby formula and other specialised foods required by young children.
+            </p>
+        </div>
+
+        <div class="amenity-card">
+            <img src="images/amenities/food1.jpg" alt="Food">
+        </div>
+
+    </div>
+
+    <!-- MEDICAL -->
+    <div id="medical" class="amenity-row">
+
+        <div class="amenity-text">
+
+            <h2> Medical Care</h2>
+
+            <h3>General Healthcare</h3>
+
+            <p>
+                Most medical care offered at the centre is limited due to financial constraints. Although every effort is made to ensure children receive treatment whenever necessary, access to professional healthcare is not always guaranteed.
+            </p>
+
+            <h3>Hospital Services</h3>
+
+            <p>
+                The centre previously relied on a post-paid agreement with Al Sabar Hospital. However, the allocated funds were often exhausted before the agreed period ended, while children with more complicated conditions required referrals to larger hospitals.
+            </p>
+
+            <h3>Infant Care</h3>
+
+            <p>
+                Babies require routine vaccinations, regular medical check-ups, infant formula and diapers. Government vaccination campaigns occasionally provide free immunisation services, but they are not frequent enough to meet the children's ongoing healthcare needs.
+            </p>
+
+            <h3>Mental Health</h3>
+
+            <p>
+                Many children arrive having experienced trauma, abuse or neglect. UNICEF has supported the centre by providing counsellors, but there remains a need for permanent counsellors, nurses and continued mental health support for children, adolescents and young mothers.
+            </p>
+
+        </div>
+
+        <div class="amenity-card">
+            <img src="images/amenities/medical1.jpg" alt="Medical Care">
+        </div>
+
+    </div>
+
+    <!-- CLOTHING -->
+    <div id="clothing" class="amenity-row reverse">
+
+        <div class="amenity-text">
+
+            <h2> Clothing & Essentials</h2>
+
+            <p>
+              Clothing at the centre is made possible largely through the generosity of donors who provide clothes, shoes, blankets and other everyday essentials. These contributions help ensure that every child has access to clean, comfortable clothing while easing the financial burden on the home.</p>
+             <p>
+            When donations are not enough, the centre purchases affordable second-hand clothing in bales. Items that are too large, too small or unsuitable for the children are carefully sold, with every shilling reinvested into meeting the centre's needs. This simple practice not only reduces waste but also creates a small, sustainable source of income that helps support the children. 
+            </p>
+
+        </div>
+
+        <div class="amenity-card">
+            <img src="images/amenities/clothing1.jpg" alt="Clothing">
+        </div>
+
+    </div>
+
+    <!-- WATER -->
+    <div id="water" class="amenity-row">
+
+        <div class="amenity-text">
+
+            <h2> Water & Electricity</h2>
+
+            <p>
+               Access to clean water and reliable electricity remains one of the centre's greatest daily challenges. Safe water must be purchased regularly for drinking, cooking, bathing and washing, making it one of the home's most significant recurring expenses. As the number of children continues to grow, so does the cost of providing these basic necessities.</p>
+
+<p>Electricity is equally essential but remains limited. At present, only a few scattered light bulbs provide illumination around the home, leaving many areas without adequate lighting. Spaces such as the baby cots require a stable source of electricity to create a safe, comfortable and nurturing environment where infants can grow and develop. The centre hopes to install solar panels to provide clean, dependable energy that will improve living conditions, enhance safety and reduce long-term electricity costs.</p>
+
+<p>Looking ahead, the centre also dreams of investing in sustainable water solutions through the installation of large rainwater harvesting tanks or the construction of a borehole. Together with solar energy, these improvements would strengthen the home's independence, reduce operating costs and ensure that every child has access to the basic resources needed to thrive.
+
+            </p>
+
+        </div>
+
+        <div class="amenity-card">
+            <img src="images/amenities/water1.jpg" alt="Water and Electricity">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
 <section class="donate-hero">
   <div class="donate-text">
-    <h2>Donate Now</h2>
-    <p>
-      Your generosity helps us provide food, shelter, education,
-      and hope for children in need.
-    </p>
-    <a href="donate.html">Support a Child</a>
+    <h2>Help Turn Shelter Into Home</h2>
+    <p>Love gives children hope, but safe shelter, food, clean water and healthcare give them the chance to thrive. Help us provide the essentials every child deserves.</p>
+    <a href="donate.html">Give the Gift Of Home</a>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  <p>© 2025 Juba Rescue Centre. All Rights Reserved.</p>
-  <p>Contact us: Saintclarehouse22@gmail.com or Posaintclarehouse@gmial.com</p>
-  <p>Telephone:</p>
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- About -->
+        <div class="footer-column">
+
+            <h3>Juba Rescue Centre</h3>
+
+            <p>
+                Providing love, protection and hope for vulnerable children in South Sudan since 2012. Together, we can build brighter futures, one child at a time.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="education.html">Education</a>
+            <a href="amenities.html">Basic Amenities</a>
+            <a href="projects.html">Projects</a>
+            <a href="donors.html">Donors & Partners</a>
+            <a href="donate.html">Donate</a>
+            <a href="faqs.html">FAQS</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                saintclarehouse22@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                postsaintclarehouse@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 920 135 555
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 981 731 441
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Juba, South Sudan
+            </p>
+
+        </div>
+
+        <!-- Call to Action -->
+        <div class="footer-column">
+
+            <h3>Get Involved</h3>
+
+            <p>
+                Whether through donations, volunteering or partnerships, your support helps transform lives and create brighter futures for vulnerable children.
+            </p>
+
+            <a href="donate.html" class="footer-donate-btn">
+                Donate Today
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Juba Rescue Centre. All Rights Reserved.
+    </div>
+
 </footer>
-<!-- JS -->
-<script>
 
-const amenities = document.querySelectorAll(".amenity-item");
-
-const popupOverlay = document.getElementById("popupOverlay");
-const popupBox = document.getElementById("popupBox");
-
-const popupTitle = document.getElementById("popupTitle");
-const popupText = document.getElementById("popupText");
-const popupImage = document.getElementById("popupImage");
-
-amenities.forEach(item => {
-
-  item.addEventListener("mouseenter", () => {
-
-    popupTitle.innerText = item.dataset.title;
-    popupText.innerText = item.dataset.text;
-    popupImage.src = item.dataset.image;
-
-    popupBox.className = "popup-box";
-    popupBox.classList.add(item.dataset.bg);
-
-    popupOverlay.classList.add("active");
-
-  });
-
-  item.addEventListener("mouseleave", () => {
-
-    popupOverlay.classList.remove("active");
-
-  });
-
-});
-
-popupOverlay.addEventListener("mouseenter", () => {
-  popupOverlay.classList.add("active");
-});
-
-popupOverlay.addEventListener("mouseleave", () => {
-  popupOverlay.classList.remove("active");
-});
-
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

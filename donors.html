@@ -7,12 +7,11 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<!-- TOP BAR -->
-<div class="top-bar">
-  <img src="images/logo-circle.png" alt="Juba Logo">
-  <span>JUBA RESCUE CENTRE</span>
-</div>
-
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="logo-circle"></div>
+    <div class="centre-name">JUBA RESCUE CENTRE</div>
+  </div>
 <!-- NAVBAR -->
 <nav class="navbar">
   <a href="index.html">Home</a>
@@ -21,88 +20,432 @@
   <a href="amenities.html">Basic Amenities</a>
   <a href="donors.html">Donors & Partners</a>
   <a href="projects.html">Projects</a>
-  <a href="faqs.html">FAQs</a>
   <a href="donate.html" class="donate-btn">Donate</a> 
+  <a href="faqs.html">FAQs</a>
+ 
 </nav>
-  <!-- HERO SLIDESHOW SECTION -->
-  <section class="donors-hero">
-    <div class="slideshow-container">
+  <!-- HERO SECTION -->
+ <section class="hero">
 
-      <!-- Slide 1 -->
-      <div class="slide active">
-        <div class="slide-img" style="background-color:#87cefa;"></div>
-        <div class="slide-text">
-          <h2>Local Community Support</h2>
-          <p>Our neighbors have helped provide school supplies and food for the children.</p>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="slide">
-        <div class="slide-img" style="background-color:#add8e6;"></div>
-        <div class="slide-text">
-          <h2>International Donations</h2>
-          <p>Organizations from around the world have contributed to our education programs.</p>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="slide">
-        <div class="slide-img" style="background-color:#b0e0e6;"></div>
-        <div class="slide-text">
-          <h2>Volunteer Contributions</h2>
-          <p>Over the years, Juba Rescue Centre has been supported by compassionate individuals, local businesses, community groups, and international organizations whose contributions continue to make a meaningful difference in the lives of vulnerable children.</p>
-        </div>
-      </div>
-
-      <!-- Navigation Arrows -->
-      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-      <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
+    <div class="hero-slide active"
+         style="background-image:url('images/donors/hero1.jpg');">
     </div>
-  </section>
 
-  <!-- DONATION ANIMATIONS -->
-  <div class="donation-animations">
-    <div class="money">💵</div>
-    <div class="coin">🪙</div>
-    <div class="heart">❤️</div>
+    <div class="hero-slide"
+         style="background-image:url('images/donors/hero2.jpg');">
+    </div>
+
+    <div class="hero-slide"
+         style="background-image:url('images/donors/hero3.jpg');">
+    </div>
+
+    <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <h1>Donors & Partners</h1>
+
+    <p class="hero-quote">
+        "How wonderful is it that nobody need wait a single moment before starting to improve the world"
+    </p>
+
+    <span class="hero-author">
+        — Anne Frank
+    </span>
+
+</div>
+</section>
+
+
+
+ <!-- STATS SECTION -->
+<section class="partner-stats">
+
+  <div class="stat-card">
+    <h2>2012 - 2026</h2>
+    <p>Years of Impact</p>
   </div>
 
-  <!-- CONTENT SECTION -->
-  <section class="donors-content">
-    <div class="donors-paragraph">
-      <p>
-        Over the years, Juba Rescue Centre has received support from generous individuals,
-        local businesses, and international organizations. Their contributions have been
-        crucial in providing care, education, and hope to hundreds of children.
-      </p>
+  <div class="stat-card">
+    <h2>240+</h2>
+    <p>Children Rescued</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>Few Months - 22</h2>
+    <p>Ages Supported</p>
+  </div>
+
+</section>
+<!-- ================= TOGETHER WE HAVE MADE A DIFFERENCE ================= -->
+
+<section class="partner-intro">
+
+    <h2>Together, We Have Made a Difference</h2>
+
+    <p>
+        Since 2012, every meal shared, every child comforted and every opportunity
+        created has been made possible by people who chose to care. From generous
+        neighbours and volunteers to humanitarian organisations and lifelong
+        partners, every act of kindness has become part of the story of Juba
+        Rescue Centre. Together, we have built more than support—we have built
+        hope.
+    </p>
+
+</section>
+
+<!-- ================= IMPACT GRID ================= -->
+
+<section class="impact-grid">
+
+    <h2>Because of Our Donors & Partners...</h2>
+
+    <div class="impact-cards">
+
+        <div class="impact-card">
+            <h3><i class="fa-solid fa-utensils"></i> Nutrition</h3>
+           
+            <p>Nutritious meals provided through generous donations.</p>
+        </div>
+
+        <div class="impact-card">
+            <h3><i class="fa-solid fa-book-open"></i> Education</h3>
+            <p>Children supported with learning opportunities and school sponsorship.</p>
+        </div>
+
+        <div class="impact-card">
+            <h3><i class="fa-solid fa-heart-pulse"></i> Healthcare</h3>
+            
+            <p>Medical care and counselling made possible through partnerships.</p>
+        </div>
+
+        <div class="impact-card">
+             <h3><i class="fa-solid fa-house"></i> Safe Shelter</h3>
+            
+            <p>Providing safety, dignity and a brighter future.</p>
+        </div>
+
+        <div class="impact-card">
+            <h3><i class="fa-solid fa-hand-holding-heart"></i> Hope</h3>
+            
+            <p>Creating a loving community where every child belongs.</p>
+        </div>
+
+         <div class="impact-card">
+            <h3><i class="fa-solid fa-box-open"></i> Clothing & Essentials</h3>
+            
+            <p>Clothing, toiletries and everyday necessities for growing children.</p>
+        </div>
+
     </div>
 
-    <div class="donors-table">
-      <select>
-        <option value="" disabled selected>Children Rescued Stats</option>
-        <option>Children Rescued: 500</option>
-        <option>Years Active: 2012-2025</option>
-        <option>Ages: 2-20</option>
-      </select>
+</section>
+
+<!-- CONTENT BLOCK 1 -->
+<section class="partner-block">
+
+  <div class="partner-image">
+      <img src="images/donors/donor1.jpg" alt="">
+  </div>
+
+  <div class="partner-text">
+    <h2>Community Support</h2>
+
+    <p>
+      Since its establishment in 2012, Juba Rescue Centre has been blessed by the generosity of individuals, families and members of the local community who have continuously supported its mission of caring for vulnerable children. Their kindness has taken many forms, including donations of food, clothing, bedding, toiletries, school supplies, toys and other essential items that help meet the children's everyday needs.</p>
+
+      <p>Many of these contributions are delivered directly to the centre by well-wishers who are passionate about improving the lives of the children. These acts of generosity not only provide practical support but also remind the children that they are valued, loved and supported by a compassionate community. Every donation, regardless of its size, plays an important role in helping the centre provide a safe, nurturing and dignified environment for every child in its care.</p>
+
+    </p>
+  </div>
+
+</section>
+
+<!-- ================= VOLUNTEER GALLERY ================= -->
+
+<section class="volunteer-gallery">
+
+    <h2>Moments of Kindness</h2>
+
+    <p>
+        Every visit leaves behind more than donations. It leaves memories,
+        encouragement and hope.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="images/donors/gallery1.jpg" alt="">
+            <span>Community Visit</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/donors/gallery2.jpg" alt="">
+            <span>Food Donation</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/donors/gallery3.jpg" alt="">
+            <span>Volunteer Day</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/donors/gallery4.jpg" alt="">
+            <span>Brightened Smiles</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/donors/gallery5.jpg" alt="">
+            <span>Medical Outreach</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/donors/gallery6.jpg" alt="">
+            <span>Sharing Joy</span>
+        </div>
+
     </div>
-  </section>
+
+</section>
+<section class="quote-banner">
+
+    <blockquote>
+
+        “No act of kindness, no matter how small, is ever wasted.”
+
+    </blockquote>
+
+    <span>- Aesop</span>
+
+</section>
+
+<!-- CONTENT BLOCK 2 -->
+<section class="partner-block reverse">
+
+  <div class="partner-image">
+    <img src="images/donors/donor2.jpg" alt="">
+  </div>
+
+  <div class="partner-text">
+    <h2>Organisational Partners</h2>
+
+    <p>
+      Over the years, Juba Rescue Centre has been privileged to work alongside a number of local and international organisations whose partnership has strengthened the care and support provided to vulnerable children. Organisations such as IsraAid, UNICEF, CARITAS, Luena Foundation and other valued partners have contributed their expertise, resources and services to improve the wellbeing of the children and the overall capacity of the centre.</p>
+
+     <p>Their support has included the provision of professional counselling services, social work and case management, educational assistance, child protection programmes, psychosocial support and other interventions aimed at promoting the safety, health and development of children. These partnerships continue to play an important role in helping the centre respond to the diverse and evolving needs of the children in its care.</p>
+    </p>
+  </div>
+
+</section>
+
+<section class="timeline-section">
+
+<h2>Our Journey Together</h2>
+
+<div class="timeline-grid">
+
+<div class="time-card">
+<h3>2012</h3>
+<p>Juba Rescue Centre was founded.</p>
+</div>
+
+<div class="time-card">
+<h3>2014</h3>
+<p>Community volunteers began regular support.</p>
+</div>
+
+<div class="time-card">
+<h3>2018</h3>
+<p>Educational partnerships expanded.</p>
+</div>
+
+<div class="time-card">
+<h3>2022</h3>
+<p>Child protection programmes strengthened.</p>
+</div>
+
+<div class="time-card">
+<h3>Today</h3>
+<p>Hundreds of children continue receiving care and hope.</p>
+</div>
+
+<div class="time-card future">
+<h3>Tomorrow</h3>
+<p>A permanent home built together.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTENT BLOCK 3 -->
+<section class="partner-block">
+
+  <div class="partner-image">
+    <img src="images/donors/donor3.jpg" alt="">
+  </div>
+
+  <div class="partner-text">
+    <h2>Child Sponsorship</h2>
+
+    <p>
+      Child sponsorship is one of the most meaningful ways supporters can make a lasting difference in a child's life. Through sponsorship, generous individuals and organisations help meet a child's educational expenses, healthcare needs, nutrition, clothing and other daily necessities, providing the stability and resources needed for healthy growth and development. These contributions ensure that children have access to opportunities that might otherwise be beyond their reach.</p>
+
+    <p>In addition to sponsorship, Juba Rescue Centre supports community and family fostering where it is safe and in the best interests of the child. Suitable foster families are carefully identified and assessed before placement, and our social worker conducts regular follow-up visits to monitor each child's wellbeing, ensure they remain safe, and provide ongoing guidance and support to both the child and the foster family. Through both sponsorship and fostering, we strive to give every child the opportunity to grow up in a secure, caring and supportive environment.</p>
+    </p>
+  </div>
+
+</section>
+
+<section class="help-section">
+
+<h2>Ways You Can Help</h2>
+
+<div class="help-grid">
+
+<div class="help-card">
+    <i class="fa-solid fa-hands-helping"></i>
+
+<h3>Volunteer</h3>
+</div>
+
+<div class="help-card">
+ <i class="fa-solid fa-child-reaching"></i>
+<h3>Sponsor</h3>
+</div>
+
+<div class="help-card">
+ <i class="fa-solid fa-hand-holding-heart"></i>
+<h3>Donate</h3>
+</div>
+
+<div class="help-card">
+ <i class="fa-solid fa-share-nodes"></i>
+<h3>Share Our Story</h3>
+</div>
+
+<div class="help-card">
+<h3><i class="fa-solid fa-hand-holding-dollar"></i> Fundraise</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTENT BLOCK 4 -->
+<section class="partner-block reverse">
+
+  <div class="partner-image">
+    <img src="images/donors/donor4.jpg" alt="">
+  </div>
+
+  <div class="partner-text">
+    <h2>Looking Ahead</h2>
+
+    <p>
+      As Juba Rescue Centre looks to the future, we remain committed to building strong and sustainable partnerships that will expand opportunities for every child in our care. We continue to seek the support of individuals, organisations, businesses, faith-based institutions and development partners who share our vision of providing vulnerable children with a safe, loving and stable environment in which they can thrive.</p>
+
+     <p>Our priorities include securing a permanent home for the centre, improving access to quality education and healthcare, strengthening child protection services, expanding vocational and life-skills training, and enhancing the facilities and resources available to the children. Every partnership, donation and act of generosity whether large or small, plays a vital role in transforming lives and creating brighter, more hopeful futures for the children and young people we serve.</p>
+    </p>
+  </div>
+
+</section>
 <!-- DONATE CTA -->
   <section class="donate-hero">
     <div class="donate-text">
-      <h2>Help Us Continue Changing Lives</h2>
-      <p>Support vulnerable children by donating today.</p>
-      <a href="donate.html">Donate Now</a>
-    </div>
-  </section>
+      <h2>Become a Part of our Journey</h2>
+      <p>Every partnership creates new opportunities, new hope and new beginnings for the children we serve.</p>
+      <a href="donate.html">Partner With Us</a>
+</div>
+ </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 Juba Rescue Centre. All rights reserved.</p>
-  </footer>
+ <footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- About -->
+        <div class="footer-column">
+
+            <h3>Juba Rescue Centre</h3>
+
+            <p>
+                Providing love, protection and hope for vulnerable children in South Sudan since 2012. Together, we can build brighter futures, one child at a time.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="education.html">Education</a>
+            <a href="amenities.html">Basic Amenities</a>
+            <a href="projects.html">Projects</a>
+            <a href="donors.html">Donors & Partners</a>
+            <a href="donate.html">Donate</a>
+            <a href="faqs.html">FAQS</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                saintclarehouse22@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                postsaintclarehouse@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 920 135 555
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +211 981 731 441
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Juba, South Sudan
+            </p>
+
+        </div>
+
+        <!-- Call to Action -->
+        <div class="footer-column">
+
+            <h3>Get Involved</h3>
+
+            <p>
+                Whether through donations, volunteering or partnerships, your support helps transform lives and create brighter futures for vulnerable children.
+            </p>
+
+            <a href="donate.html" class="footer-donate-btn">
+                Donate Today
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Juba Rescue Centre. All Rights Reserved.
+    </div>
+
+</footer>
 
   <!-- JS -->
   <script src="js/main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </body>
 </html>
