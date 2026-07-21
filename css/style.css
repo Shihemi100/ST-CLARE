@@ -3497,7 +3497,7 @@ grid-template-columns:1fr;
     width:100%;
     z-index:3;
     height:80vh;
-    background:url("/images/donate/donate-cta.jpg") center/cover no-repeat;
+    background:url("../images/donate/donate-cta.jpg") center/cover no-repeat;
     display:flex;
     align-items:center;
     
